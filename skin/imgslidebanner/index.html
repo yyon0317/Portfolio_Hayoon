@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imgslidebanner</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+
+    <style>
+        /*reset*/
+        * {margin: 0;padding: 0;box-sizing: border-box;}
+        ul,ol,li {list-style: none;}
+        a {text-decoration: none;color: #000;}
+        html,body {font-size: 20px;width: 100%;height: 100%;}
+        img {border: 0;}
+
+        .main_visual{
+            position:relative;
+            margin-bottom:120px;
+        }
+        .main_visual .swiper-container{
+            width:100%;
+            height:100%
+        }
+        .main_visual .swiper-wrapper{
+            height:100%;
+        }
+        .main_visual .swiper-slide{
+            height:100%;
+			text-align:center;
+			background:#fff;
+            display:-webkit-box;
+			display:-ms-flexbox;
+			display:-webkit-flex;
+			display:flex;
+            -webkit-box-pack:center;
+			-ms-flex-pack:center;
+            -webkit-justify-content:center;
+			justify-content:center;
+            -webkit-box-align:center;
+			-ms-flex-align:center;
+			-webkit-align-items:center;
+			align-items:center;
+        }
+        .main_visual .swiper-slide a{
+            display:block;
+            width:100%;
+            height:100%;
+            background-repeat:no-repeat;
+            background-position:center 0;
+        }
+        .main_visual .swiper-slide a img{
+            width:100%;
+            height:auto;
+        }
+        .main_visual .swiper-button-prev,
+        .main_visual .swiper-button-next{
+            width:60px;
+            height:60px;
+            margin:-30px 0 0;
+            text-align:center;
+            opacity:0;
+            transition:all 0.5s;
+            background:none
+        ;
+        }
+        .main_visual .swiper-button-prev{
+            right:auto;
+            left:200px;
+            text-align:left;
+        }
+        .main_visual .swiper-button-next{
+            left:auto;
+            right:200px;
+            text-align:right;
+        }
+        .main_visual .swiper-button-prev i,
+        .main_visual .swiper-button-next i{
+            display:inline-block;
+            width:60px;
+            height:60px;
+            line-height:60px;
+            text-align:center;
+            font-size:38px;
+            color:#fff;
+            transition:all 0.5s;
+        }
+        .main_visual .swiper-button-prev:hover i,
+        .main_visual .swiper-button-next:hover i {
+            color:#666;
+        }
+        .main_visual:hover .swiper-button-prev,
+        .main_visual:hover .swiper-button-next{
+            opacity:1;
+        }
+        .main_visual .bnn_tab{
+            position:absolute;
+            left:0;
+            bottom:30px;
+            width:100%;
+            text-align:center;
+            z-index:10;
+        }
+        .main_visual .bnn_tab a{display:inline-block;
+            font-size:12px;
+            color:#fff;
+            border-bottom:2px solid #fff;
+            padding:0 10px 10px;
+            margin:0 10px;
+            transition:border-color 1s, color 1s;
+        }
+        .main_visual .bnn_tab a.on{
+            border-color:#666;
+            color:#333;
+        }
+
+
+    </style>
+
+</head>
+<body> 
+
+    <div class="main_visual">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><a href="#none"><img src="img/mainbnn1.jpg" alt="미세먼지 필수템 공기청정기"/></a></div>
+                <div class="swiper-slide"><a href="#none"><img src="img/mainbnn2.jpg" alt="위드코로나시대와 함께하는 손소독체온기"/></a></div>
+                <div class="swiper-slide"><a href="#none"><img src="img/mainbnn3.jpg" alt="휴대하기 좋은 공기청정기K1"/></a></div>
+            </div>
+            <!--<div class="swiper-pagination"></div>-->
+            <div class="swiper-button-next"><i class="xi-angle-right"></i></div>
+            <div class="swiper-button-prev"><i class="xi-angle-left"></i></div>
+            <div class="bnn_tab"></div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+    $(function(){
+    
+    // 배너 타이틀 추출 (탭 구성)
+    $(".main_visual .swiper-slide img").each(function(){
+        var bnn_tit = $(this).attr("alt");
+        $(".main_visual .bnn_tab").append($("<a href='#none' class='tab'>"+bnn_tit+"</a>"));
+    });
+    $(".main_visual .bnn_tab a").eq(0).addClass("on");
+    
+    // 메인 롤링배너
+    var main_visual1 = new Swiper('.main_visual .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        effect: 'fade',
+        speed: 1000,
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.main_visual .swiper-pagination',
+            clickable: true
+        },
+        navigation: {
+            nextEl: '.main_visual .swiper-button-next',
+            prevEl: '.main_visual .swiper-button-prev'
+        },
+    });
+    main_visual1.on('slideChange', function(){
+        //console.log(this.realIndex);
+    	$(".main_visual .bnn_tab a").removeClass("on");
+        $(".main_visual .bnn_tab a").eq(this.realIndex).addClass("on");
+    });
+    $(".main_visual .bnn_tab a").click(function(){
+        var tab_length = $(this).length;
+        var slide_idx = $(this).index()+1;
+        if(slide_idx == 0){
+            main_visual1.slideTo(tab_length);
+        } else {
+            main_visual1.slideTo(slide_idx);
+        }
+    });
+   
+
+    // title, alt 삭제
+    var slide_imgLink = $(".main_visual .swiper-slide a").length;
+    if(slide_imgLink > 0){
+        $(".main_visual .swiper-slide a").attr("alt","");
+        $(".main_visual .swiper-slide img").attr("title","");
+    } else {
+        $(".main_visual .swiper-slide img").attr("title","");
+    }
+
+});
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

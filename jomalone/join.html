@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>join</title>
+	<link rel="stylesheet" href="css/join/join.css">
+	<link rel="stylesheet" href="css/commens/reset.css">
+	<link rel="stylesheet" href="css/commens/header.css">
+	<link rel="stylesheet" href="css/commens/footer.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/index.js"></script>
+</head>
+
+<body>
+	<div id="wrap">
+		<div class="header">
+			<div class="inner-header">
+				<div class="topmenu">
+					<h1 class="logo"><a href="index.html"><img src="img/commens/logo1.png" alt="logo"></a></h1>
+					<span class="menu"><img src="img/commens/menu.png" alt="menu"></span>
+				</div>
+				<div class="middlemenu">
+					<div class="middle-con">
+						<ul>
+							<li><a href="#"><img class="map" src="img/commens/map.png" alt="map"></a>
+								<span class="sub map">STORE</span>
+							</li>
+							<li><a href="#"><img class="heart" src="img/commens/heart.png" alt="heart"></a>
+								<span class="sub heart">CART</span>
+
+							</li>
+							<li><a href="#"><img class="me" src="img/commens/me.png" alt="me"></a>
+								<span class="sub me">
+									ME</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="bottommenu">
+					<div class="gnb">
+						<div class="gnb-center">
+							<ul>
+								<li><a href="sub2.html">NEW&BEST</a></li>
+								<li><a href="#">FRAGRANCE</a></li>
+								<li><a href="#">BATH AND BODY</a></li>
+								<li><a href="#"> HOME COLLECTION </a></li>
+								<li><a href="sub.html">GIFT PROPOSAL</a></li>
+								<li><a href="#">BRAND</a></li>
+							</ul>
+						</div>
+						<div class="gnb-left">
+							<ul>
+								<li><a href="join.html">join</a></li>
+								<li><a href="login.html">login</a></li>
+							</ul>
+						</div>
+						<div class="leftxmenu"><img src="img/commens/x.png" alt="closed"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ad">
+			<div class="adt">
+				Meet Jomalon Online Exclusive Sales.</div>
+		</div>
+		<div class="submenu">
+			<div class="inner-submenu">
+				<div class="subgnb">
+					<ul>
+						<li><a href="#">NEWs</a><br>
+							<a href="#">BEST</a>
+						</li>
+						<li><a href="#">CITRUS</a><br>
+							<a href="#">
+								FRUITY</a><br>
+							<a href="#">
+								LIGHT FLORAL
+							</a><br>
+							<a href="#">FLORAL</a><br>
+							<a href="#">
+								SPICY</a><br>
+							<a href="#">
+								WOODY</a><br>
+						</li>
+						<li><a href="#">
+								BATH AND SHOWER</a><br>
+							<a href="#">
+								BODY CARE</a><br>
+							<a href="#">
+								HAIR CARE</a>
+						</li>
+						<li><a href="#">CANDLE</a><br>
+							<a href="#">
+								DEFUSER</a><br>
+							<a href="#">
+								SPRAY</a>
+						</li>
+						<li><a href="#">
+								GIFT FOR HER</a><br>
+							<a href="#">
+								GIFT FOR HIM</a><br>
+							<a href="#">
+								GIFT FOR SPACE</a><br>
+							<a href="#">WEDDING COLLECTION</a>
+						</li>
+						<li><a href="#">
+								STORE</a><br>
+							<a href="#">
+								EVENT</a><br>
+							<a href="#">
+								BRAND</a><br>
+							<a href="#">
+								EXPERINCE</a><br>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="contents">
+			<div class="inner-con">
+				<div class="join">
+					<div class="join-title">
+						<h1 class="maintitle"><img src="img/join/logo.png" alt="logo"></h1>
+						<p class="subtitle">조말론 웹사이트에 가입하시면 뉴스레터와 같은 다양한 정보를 받아보실 수 있습니다</p>
+					</div>
+					<div class="join-form">
+						<form action="join.do" method="post">
+							<ul>
+								<li>
+									<input type="text" name="name" id="name" placeholder="이름">
+								</li>
+								<li>
+									<input type="email" name="emailname" id="emailname" placeholder="이메일">
+									<input type="button" value="이메일 중복확인" id="idcheckok">
+									<!--아이디 확인이 안되면 회원가입을 실행하지 못하게-->
+									<input type="hidden" name="checkid" value="nochecked">
+
+								</li>
+								<li>
+									<input type="password" name="pw1" id="pw1" placeholder="비밀번호">
+								</li>
+								<li>
+									<input type="password" name="pw2" id="pw2" placeholder="비밀번호확인"><span class="pwcheck"></span>
+								</li>
+								<li>
+									<input type="phone" name="smart-phone" id="smart-phone" placeholder="전화번호">
+									<input type="phone2" name="smart-phone" id="smart-phone" placeholder="-">
+									<input type="phone" name="smart-phone" id="smart-phone" placeholder="-">
+								</li>
+								<li>
+									<input type="phone" name="house-phone" id="house-phone" placeholder="집전화전호">
+									<input type="phone2" name="house-phone" id="house-phone" placeholder="-">
+									<input type="phone" name="house-phone" id="house-phone" placeholder="-">
+								</li>
+								<li>
+									<input type="text" name="city1" id="city1" placeholder="주소">
+								</li>
+								<li>
+									<input type="text" name="city2" id="city2" placeholder="상세주소">
+								</li>
+								<li>
+									<input type="submit" value="sign up" id="joinok">
+								</li>
+							</ul>
+							<span class="private">이용약관<p>개인정보 수집</p></span>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="inner-fcon">
+				<ul>
+					<li>
+						<ul>
+							<li class="logo"><a href="#"><img src="img/commens/logo1.png" alt="logo"></a></li>
+							<li class="search"><img src="img/commens/search.png" alt="search">
+								<input type="text" name="search" id="search" placeholder="search">
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li class="title"><a href="#">CUSTOMER SERVICE</a></li>
+							<li><a href="#">FAQ</a></li>
+							<li><a href="#">Contact Us</a></li>
+							<li><a href="#">My Profile</a></li>
+							<li><a href="#">My Order</a></li>
+							<li><a href="#">Delivery</a></li>
+							<li><a href="#">Returns & Exchanges</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li class="title"><a href="#">OUR COMPANY</a></li>
+							<li><a href="#">Corporate Info</a> </li>
+							<li><a href="#">Corporate Statements</a></li>
+							<li><a href="#">Corporate Sales</a></li>
+							<li><a href="#">Anti-Slavery</a></li>
+							<li><a href="#">Careers</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li class="title"><a href="#">VISIT & EXPLORE</a></li>
+							<li><a href="#">Store locator</a></li>
+							<li><a href="#">Stories</a></li>
+							<li><a href="#">Charities</a></li>
+							<li><a href="#">Shopping Online</a></li>
+							<li><a href="#">SOCIAL</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li class="title"><a href="#">Service center</a></li>
+							<li><a href="#">1544-5885</a></li>
+							<li><a href="#">Mon-Fri 09:00-18:00</a></li>
+							<li><a href="#">Lunch time 12:30-13:30</a></li>
+							<li><a href="#">© Jo Malone London 2020</a></li>
+							<li>
+								<ul>
+									<li><a href="#"><img src="img/commens/facebook.png" alt="facebook"></a>
+									</li>
+									<li><a href="#"><img src="img/commens/instagram.png" alt="instagram"></a></li>
+									<li><a href="#"><img src="img/commens/twitter.png" alt="twitter"></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		//아이디 체트 
+		var idcheckok = document.querySelector('#idcheckok');
+		idcheckok.addEventListener('click', idcheckokfunc);
+
+		function idcheckokfunc() {
+			var userid = document.getElementsByName('emailname')[0];
+			var checkid = document.getElementsByName('checkid')[0];
+			if (userid.value == "" || userid.value == null || userid.value.length <= 4) {
+				alert("아이디 입력 오류 다시 입력하세요")
+				userid.focus();
+				return false;
+			}
+			if (userid.value != "yhy8283@naver.com") {
+				alert("사용할 수 있는 아이디")
+				checkid.value = "okchecked"; //아이디가 M111이면
+			} else {
+				alert("사용할 수 없는 아이디")
+				checkid.value = "nochecked";
+			}
+		}
+		//비밀번호
+		var userpw = document.getElementsByName('pw1')[0];
+		var userpw2 = document.getElementsByName('pw2')[0];
+		userpw2.addEventListener('keyup', userpw2up);
+		var pwcheck = document.querySelector('span.pwcheck')
+
+		function userpw2up() {
+
+			if (userpw.value != userpw2.value || userpw2.value == "" || userpw2.value == null) {
+				pwcheck.textContent = "비밀번호가 틀립니다";
+				pwcheck.style.color = "#f00";
+			} else {
+				pwcheck.textContent = "비밀번호가 일치합니다";
+				pwcheck.style.color = "#00f";
+			}
+		}
+		//회원가입 실행
+		let joinok = document.querySelector('#joinok');
+		joinok.addEventListener('click', joinokfunc);
+
+		function joinokfunc() {
+			var name = document.getElementsByName('name')[0];
+			var emailname = document.getElementsByName('emailname')[0];
+			var pw1 = document.getElementsByName('pw1')[0];
+			var pw2 = document.getElementsByName('pw2')[0];
+			var checkid = document.getElementsByName('checkid')[0];
+			var smartphone = document.getElementsByName('smart-phone');
+			var housephone = document.getElementsByName('house-phone');
+			var city1 = document.getElementsByName('city1')[0];
+			var city2 = document.getElementsByName('city2')[0];
+			if (checkid.value != "okchecked") {
+				alert("아이디 중복 확인을 해주세요")
+				checkid.focus();
+				return false;
+			}
+			if (name.value == "" || name.value == null || name.value.length <= 2) {
+				alert("이름 입력 오류.. 다시 입력 해주세요");
+				name.focus();
+				return false;
+			}
+			if (emailname.value == "" || emailname.value == null || emailname.value.length <= 5) {
+				alert("이메일 입력 오류.. 다시 입력 해주세요");
+				emailname.focus();
+				return false;
+			}
+			if (pw1.value == "" || pw1.value == null || pw1.value.length <= 5) {
+				alert("비밀번호 입력 오류.. 다시 입력 해주세요");
+				pw1.focus();
+				return false;
+			}
+			if (pw2.value != pw2.value || pw2.value == "" || pw2.value == null) {
+				alert("비밀번호 확인 오류.. 다시입력하세요");
+				pw2.focus();
+				return false;
+			}
+			if (smartphone[0].value == "") {
+				alert("휴대폰 번호를 선택해주세요");
+				smartphone[0].focus();
+				return false;
+			}
+			if (smartphone[1].value == "" || smartphone[1].value == null || smartphone[1].value.length < 3) {
+				alert("휴대폰번호 두번째를 입력해주세요");
+				smartphone[1].focus();
+				return false;
+			}
+			if (smartphone[2].value == "" || smartphone[2].value == null || smartphone[2].value.length < 3) {
+				alert("휴대폰번호 세번째를 입력해주세요");
+				smartphone[2].focus();
+				return false;
+			}
+			if (housephone[0].value == "") {
+				alert("집번호를 선택해주세요");
+				housephone[0].focus();
+				return false;
+			}
+			if (housephone[1].value == "" || housephone[1].value == null || housephone[1].value.length < 3) {
+				alert("집번호 두번째를 입력해주세요");
+				smartphone[1].focus();
+				return false;
+			}
+			if (housephone[2].value == "" || housephone[2].value == null || housephone[2].value.length < 3) {
+				alert("집번호 세번째를 입력해주세요");
+				housephone[2].focus();
+				return false;
+			}
+			if (city1.value == "" || city1.value == null || city1.value.length < 2) {
+				alert("주소를 입력해주세요");
+				city1.focus();
+				return false;
+			}
+			if (city2.value == "" || city2.value == null || city2.value.length < 2) {
+				alert("상세주소를 입력해주세요");
+				city2.focus();
+				return false;
+			}
+			alert("회원가입 고");
+			var joinform = document.getElementsByName('joinform');
+			joinform.submit();
+		}
+
+	</script>
+
+</body>
+
+</html>

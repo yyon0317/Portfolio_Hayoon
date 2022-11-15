@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bannernotice</title>
+
+    <style>
+        /*reset*/
+        * {margin: 0;padding: 0;box-sizing: border-box;}
+        ul,ol,li {list-style: none;}
+        a {text-decoration: none;color: #000;}
+        html,body {font-size: 20px;width: 100%;height: 100%;}
+        img {border: 0;}
+        button {border: none;background: none;cursor: pointer;}
+
+
+        #topBanner {
+            position:relative;
+            overflow:hidden;
+            height:38px;
+            text-align:center;
+            background:#000;
+        }
+        #topBanner .desc {
+            overflow:hidden;
+            height:16px;
+            margin:11px 56px;
+            font-size:12px;
+            color:#fff;
+            box-sizing:border-box;
+        }
+        #topBanner .btnClose {
+            position:absolute;
+            right:50px;
+            top:12px;
+            width:15px;
+            height:15px;
+            overflow:hidden;
+            color:#fff;
+        }
+        #topBanner.hidden {
+            display:none;
+        }
+
+
+
+</style>
+
+</head>
+<body>
+    <div id="topBanner" role="banner">
+        <div class="desc">25,000원 이상 구매시 무료배송 / 신규가입 시 3,000원 즉시 사용가능 쿠폰 증정</div>
+        <button type="button" class="btnClose">X</button>
+    </div>
+
+
+<script>
+
+window.addEventListener('load', function(){
+    topBanner();
+});
+function topBanner(){
+    var banner = document.querySelector('#topBanner');
+    var btnClose = banner.querySelector('.btnClose');
+    btnClose.addEventListener('click', function(){
+        banner.classList.add("hidden");
+    });
+}
+
+
+</script>
+
+
+</body>
+</html>

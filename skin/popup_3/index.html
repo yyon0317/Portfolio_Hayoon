@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popup</title>
+
+    <style>
+        /*reset*/
+        /*reset*/
+        * {margin: 0;padding: 0;box-sizing: border-box;}
+        ul,ol,li {list-style: none;}
+        a {text-decoration: none;color: #000;}
+        html,body {font-size: 20px;width: 100%;height: 100%;}
+        img {border: 0;}
+
+		#pop_002 {
+			overflow:hidden;
+			position:relative;
+			left:0px; top:0px;
+			width:284px;
+			height:324px;
+			border:1px solid #ddd;
+			visibility:visible;
+			z-index:999;
+		}
+		#pop_002 img {
+			width:268px;
+			height:310px;
+		}
+		#pop_002 ul {
+			list-style:none;
+			padding:8px;
+		}
+		#divMenu_p002 {
+			float:left;
+			position:relative;
+			left:0px;
+			top:0px;
+			width:284px;
+			height:92px;
+			padding-top:4px;
+			border:1px solid #ddd;
+			border-top:0px solid #ddd;
+			visibility:visible;
+			z-index:999;
+		}
+		#divMenu_p002 img {
+			width:82px;
+			height:82px;
+		}
+		.pagination_p002 {
+			float:left;
+			height:20px;
+		}
+		.pagination_p002 li {
+			float:left;
+			width:82px;
+			height:82px;
+			margin:0px 0px 8px 8px;
+			border:1px solid #ddd;
+			cursor:pointer;
+		}
+		li.current_p002 {
+			border:1px solid #D49696;
+			opacity:1.0;
+		}
+		li#content {
+			width:282px;
+			height:111px;
+			margin:0px 0px 8px 8px;
+			background:#fff;
+		}
+</style>
+
+</head>
+<body>
+
+  <div  id="pop_002"  style='z-index:1000;'>
+	  <ul id="changes_p002">
+      <li><a onfocus=blur() target="_blank" href="#"><img src="img/pop_002_popevent_3-2.jpg"/></a></li>
+      <li><a onfocus=blur() target="_blank" href="#/"><img src="img/pop_002_popevent_3-3.jpg"/></a></li>
+      <li><a onfocus=blur() target="_blank" href="#"><img src="img/pop_002_popevent_3-1.jpg"/></a></li>
+	  </ul>   
+  </div>    
+    
+  <div id="divMenu_p002"> 
+	  <ul id="pagination_p002" class="pagination_p002">
+      <li onmouseover="pop_002.pos(0)"><a onfocus=blur() target="_blank" href="#"><img src="img/pop_002_poptiny_1.jpg"/></a></li>
+      <li onmouseover="pop_002.pos(1)"><a onfocus=blur() target="_blank" href="#"><img src="img/pop_002_poptiny_2.jpg"/></a></li>        
+      <li onmouseover="pop_002.pos(2)"><a onfocus=blur() target="_blank" href="#"><img src="img/pop_002_poptiny_3.jpg"/></a></li>            
+	  </ul>
+  </div>
+    
+<script> 
+
+
+var TINY_p002={};
+
+function T$(i){return document.getElementById(i)}
+function T$$(e,p){return p.getElementsByTagName(e)}
+
+TINY_p002.fader=function(){
+	function fade(n,p){this.n=n; this.init(p)}
+	fade.prototype.init=function(p){
+		var s=T$(p.id), u=this.u=T$$('li',s), l=u.length, i=this.l=this.c=this.z=0;
+		if(p.navid&&p.activeclass){this.g=T$$('li',T$(p.navid)); this.s=p.activeclass}
+		s.style.overflow='hidden'; this.a=p.auto||0; this.p=p.resume||0;
+		for(i;i<l;i++){
+			if(u[i].parentNode==s){
+				u[i].style.position='absolute'; this.l++; u[i].o=p.visible?100:0;
+				u[i].style.opacity=u[i].o/100; u[i].style.filter='alpha(opacity='+u[i].o+')'
+			}
+		}
+		this.pos(p.position||0,this.a?1:0,p.visible)
+	},
+	fade.prototype.auto=function(){
+		this.u.ai=setInterval(new Function(this.n+'.move(1,1)'),this.a*3000)
+	},
+	fade.prototype.move=function(d,a){
+		var n=this.c+d, i=d==1?n==this.l?0:n:n<0?this.l-1:n; this.pos(i,a)
+	},
+	fade.prototype.pos=function(i,a,v){
+		var p=this.u[i]; 
+		this.z++; 
+		p.style.zIndex=this.z;
+		clearInterval(p.si); 
+		
+		clearInterval(this.u.ai); 
+		this.u.ai=0; 
+		this.c=i;
+		if(p.o>=100&&!v){
+			p.o=0; 
+			p.style.opacity=0; 
+			p.style.filter='alpha(opacity=0)'
+		}
+		if(this.g){
+			for(var x=0;x<this.l;x++){
+				this.g[x].className=x==i?this.s:''}
+				}
+		p.si=setInterval(new Function(this.n+'.fade('+i+','+a+')'),20)
+	},
+	fade.prototype.fade=function(i,a){
+		var p=this.u[i];
+		if(p.o>=100){
+			clearInterval(p.si); if((a||(this.a&&this.p))&&!this.u.ai){this.auto()}
+		}else{
+			p.o+=5; p.style.opacity=p.o/100; p.style.filter='alpha(opacity='+p.o+')'
+		}
+	};
+	return{fade:fade}
+}();
+
+
+var pop_002=new TINY_p002.fader.fade('pop_002',{
+	id:'changes_p002',
+	auto:1,
+	resume:true,
+	navid:'pagination_p002',
+	activeclass:'current_p002',
+	visible:true,
+	position:0
+});
+</script> 
+</body>
+</html>

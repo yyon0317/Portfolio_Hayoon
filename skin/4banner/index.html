@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bannernotice</title>
+
+    <style>
+        /*reset*/
+        * {margin: 0;padding: 0;box-sizing: border-box;}
+        ul,ol,li {list-style: none;}
+        a {text-decoration: none;color: #000;}
+        html,body {font-size: 20px;width: 100%;height: 100%;}
+        img {border: 0;}
+
+        #wrap {
+            width:1610px;
+            margin:0 auto;
+        }
+        .m4banner .m4bannerArea {
+            margin:50px auto;
+            border:1px solid #ddd
+        }
+        .m4banner .m4bannerArea:after {
+            content:"";
+            display:block;
+            clear:both;
+        }
+        .m4banner .m4bannerArea .m4bannerLeft {
+            float:left;
+        }
+        .m4banner .m4bannerArea .m4bannerLeft ul:after {
+            content:"";
+            display:block;
+            clear:both;
+        }
+        .m4banner .m4bannerArea .m4bannerLeft ul li {
+            float: left;
+            width: 400px;
+            height:200px;
+        }
+
+        .m4banner .m4bannerArea .m4bannerRight {
+            float: right;
+            width:400px;
+            margin:12px 0;
+        }
+        .m4banner .m4bannerArea .m4bannerRight h3 {
+            margin:0 20px 10px;
+            font-size: 12px;
+        }
+        .m4banner .m4bannerArea .m4bannerRight h3:after {
+            content:"";
+            display:block;
+            clear:both;
+        }
+        .m4banner .m4bannerArea .m4bannerRight ul {
+            padding:0 20px;
+        }
+        .m4banner .m4bannerArea .m4bannerRight li:after {
+            content:"";
+            display:block;
+            clear:both;
+        }
+        .m4banner .m4bannerArea .m4bannerRight li {
+            border-bottom: 1px dotted #e4e4e4;
+            line-height:30px;
+        }
+        .m4banner .m4bannerArea .m4bannerRight li p {
+            float:left;
+        }
+        .m4banner .m4bannerArea .m4bannerRight li p.txtLess {
+            float:right;
+            color:#999;
+        }
+        .m4banner .m4bannerArea .m4bannerRight a {
+            color:#999;
+            letter-spacing:0;
+            float:left;
+            white-space:nowrap;
+            text-overflow: ellipsis;
+            width:225px;
+            overflow:hidden;
+        }
+        .m4banner .m4bannerArea .m4bannerRight a:hover {
+            color:#333;
+        }
+
+
+</style>
+
+</head>
+<body>
+    <div id="wrap">
+    <div class="m4banner">
+        <div class="m4bannerArea">
+            <!-- 배너 -->
+            <div class="m4bannerLeft">
+                <ul>
+                    <li><a href="#" alt="banner1"><img src="img/banner1.jpg" alt=""></a></li>
+                    <li><a href="#" alt="banner1"><img src="img/banner2.jpg" alt=""></a></li>
+                    <li><a href="#" alt="banner1"><img src="img/banner3.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            
+            <!-- 공지사항 -->
+            <div class="m4bannerRight">
+                <h3>NOTICE</h3>
+                <ul>
+                    <li class="clearfix">
+                        <p><a href="/board/free/read.html{$param_read}">몰 오픈을 축하힙니다.</a></p>
+                        <p class="txtLess {$date_display|display}">05-15</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+     </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rightbanner(tpsxjtiq01)</title>
+
+    <style>
+        /*reset*/
+        * {margin: 0;padding: 0;box-sizing: border-box;}
+        ul,ol,li {list-style: none;}
+        a {text-decoration: none;color: #000;}
+        html,body {font-size: 20px;width: 100%;height: 100%;}
+        img {border: 0;}
+
+        /* 퀵메뉴280 */
+        #quick_wrap {
+            position:fixed;
+            width:280px;
+            height:100%;
+            right:0px;
+            top:0px;
+            font-family: 'Roboto', 'NanumGothic-Regular', Arial, "돋움", Dotum, 'Apple SD Gothic Neo', AppleGothic, sans-serif;
+            z-index:99;
+            background:none;
+        }
+        #content {
+            width:180px;
+            height:100%;
+            padding:0px 20px 0 20px;
+            background:#fff;
+            float:right;
+            border-left:1px solid #e6e6e6;
+        }
+        #quick_btn_wrap {
+            position:relative;
+            float:right;
+            top:45%;
+            right:0px;
+            width:34px;
+            background:none;
+        }
+        #quick_btn {
+            position:relative;
+            width:34px;
+            margin:0px;
+            cursor:pointer;
+        }
+
+        /*** 퀵메뉴버튼 ***/
+
+        /* open */
+        .quick_open {
+            display:block;
+            position:relative;
+            width:34px;
+            height:34px;
+            margin:0 auto;
+            text-align:center;
+            border-top:1px solid #e6e6e6;
+            border-left:1px solid #e6e6e6;
+            border-bottom:1px solid #e6e6e6;
+            background:#3a3a3a;
+            cursor:pointer;
+            transition:background 0.2s;
+            -webkit-transition:background 0.2s;
+            -moz-transition:background 0.2s;
+            -o-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+        }
+        .quick_button_btn {
+            display:inline-block;
+            position:relative;
+            top:-12px;
+            padding:0px;
+            background:none;
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -o-transform: scale(1);
+            -ms-transform: scale(1);
+        }
+        .quick_button_btn:after {
+            content: '';
+            height:14px;
+            border-left:2px solid #fff;
+            position:absolute; right:-1px;
+            transform:rotate(90deg);
+            -webkit-transform:rotate(90deg);
+            -moz-transform:rotate(90deg);
+            -o-transform:rotate(90deg);
+            -ms-transform:rotate(90deg);
+        }
+        .quick_button_btn:before {
+            content: '';
+            height:14px;
+            border-left:2px solid #fff;
+            position:absolute;
+            transform:rotate(-180deg);
+            -webkit-transform:rotate(-180deg);
+            -moz-transform:rotate(-180deg);
+            -o-transform:rotate(-180deg);
+            -ms-transform:rotate(-180deg);
+        }
+        .quick_open:hover {
+            background:#fff;
+            transition:background 0.2s;
+            -webkit-transition:background 0.2s;
+            -moz-transition:background 0.2s;
+            -o-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+        }
+        .quick_open:hover .quick_button_btn:after {
+            border-left:2px solid #3a3a3a;
+        }
+        .quick_open:hover .quick_button_btn:before {
+            border-left:2px solid #3a3a3a;
+        }
+
+        /* close */
+        .quick_close {
+            position:relative;
+            width:34px;
+            height:34px;
+            margin:0 auto;
+            text-align:center;
+            border-top:1px solid #e6e6e6;
+            border-left:1px solid #e6e6e6;
+            border-bottom:1px solid #e6e6e6;
+            background:#fff;
+            cursor:pointer;
+        }
+        .quick_close_btn {
+            display:inline-block;
+            position:relative;
+            top:-12px;
+            padding:0px;
+            background:none;
+            transform: scale(1.3);
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+        }
+        .quick_close_btn:after {
+            content: '';
+            height:12px;
+            border-left:2px solid #3a3a3a;
+            position:absolute;
+            right:-1px;
+            transform:rotate(45deg);
+            -webkit-transform:rotate(45deg);
+            -moz-transform:rotate(45deg);
+            -o-transform:rotate(45deg);
+            -ms-transform:rotate(45deg);
+        }
+        .quick_close_btn:before {
+            content: '';
+            height:12px;
+            border-left:2px solid #3a3a3a;
+            position:absolute;
+            right:-1px;
+            transform:rotate(-45deg);
+            -webkit-transform:rotate(-45deg);
+            -moz-transform:rotate(-45deg);
+            -o-transform:rotate(-45deg);
+            -ms-transform:rotate(-45deg);
+        }
+
+        .quick_close:hover {
+            background:#3a3a3a;
+            transition:background 0.2s;
+            -webkit-transition:background 0.2s;
+            -moz-transition:background 0.2s;
+            -o-transition: all 0.2s ease-in-out;
+            -ms-transition: all 0.2s ease-in-out;
+        }
+        .quick_close:hover .quick_close_btn:after {
+            border-left:2px solid #fff;
+        }
+        .quick_close:hover .quick_close_btn:before {
+            border-left:2px solid #fff;
+        }
+
+        /* 로그오프 */
+        .subgnb {
+            position:relative;
+            width:154px;
+            height:30px;
+            margin:27px 0 0px;
+            font-size:0px;
+        }
+        .subgnb a {
+            font-size:12px;
+            line-height:15px;
+            text-decoration:none;
+        }
+        .subgnb a:hover {
+            color:#b5b5b5;
+        }
+        .subgnb div {
+            float:left;
+            margin:0 10px 0 0px;
+        }
+        /* bar */
+        .subgnb div:after {
+            content: "";
+            position:absolute;
+            display:inline-block;
+            height:8px;
+            width:1px;
+            margin:4px 0 0 5px;
+            background-color:#d7d7d7;
+        }
+        .subgnb .last {
+            margin:0px;
+        }
+        .subgnb .last:after {
+            display:none;
+        }
+        /* log_wrap */
+        .subgnb .log_wrap:after {
+            display:none;
+        }
+        /* SNS */
+        #content #social {
+            width:154px;
+            margin:25px 0px 0px;
+            overflow:hidden;
+        }
+        #content #social div {
+            float:left;
+            margin:0 13px 0 0px;
+        }
+        /* 고객센터 */
+        #content #cs {
+            position:relative;
+            width:154px;
+            margin:25px 0px 0px;
+            padding:4px 0 0px;
+        }
+        #content #cs .title {
+            color:#222;
+            font-size:11px;
+            line-height:25px;
+            letter-spacing:0.5px;
+        }
+        #content #cs .title:after {
+            content: "";
+            position:absolute;
+            top:0px;
+            display:block;
+            height:2px;
+            width:18px;
+            margin:0px 0 10px;
+            background-color:#565656;
+        }
+        #content #cs .phone {
+            padding:0px 0 5px;
+            color:#222;
+            font-size:15px;
+            line-height:16px;
+            font-weight:500;
+        }
+        #content #cs .txt {
+            color:#222;
+            font-size:11px;
+            line-height:16px;
+            letter-spacing:-0.5px;
+        }
+        #content #cs p {
+            display:block;
+        }
+        #content #cs span {
+            margin:0 0 0 10px;
+        }
+
+        /* 은행 */
+        #content #bank {
+            position:relative;
+            width:154px;
+            margin:26px 0px 0px;
+            padding:4px 0 0px;
+        }
+        #content #bank .title {
+            color:#222;
+            font-size:11px;
+            line-height:25px;
+            letter-spacing:0.5px;
+        }
+        #content #bank .title:after {
+            content: "";
+            position:absolute;
+            top:0px;
+            display:block;
+            height:2px;
+            width:18px;
+            margin:0px 0 10px;
+            background-color:#565656;
+        }
+        #content #bank .txt {
+            font-size:11px;
+            line-height:18px;
+            color:#222;
+        }
+        #content #bank p {
+            display:block;
+        }
+        #content #bank span {
+            position:relative;
+            top:1px;
+            margin:0 0 0 10px;
+            font-size:11.5px;
+        }
+        #content #bank .last {
+            margin:7px 0 0px;
+        }
+
+
+</style>
+<div id="quick_wrap">
+    <div id="content">  
+        <!-- 우측퀵메뉴_gnb -->
+        <div class="subgnb">
+            <div class="log_wrap">
+                <div class="last"><a href="/myshop/index.html">MYPAGE</a></div>
+            </div> 
+            <div class="log_wrap">
+                <div><a href="/order/basket.html">CART</a></div>
+                <div><a href="/myshop/order/list.html">ORDER</a></div>
+                <div class="last"><a href="/link/bookmark.html" target="_blank" onclick="winPop(this.href); return false;">BOOKMARK</a></div>                
+            </div>    
+        </div>
+        <!-- 우측퀵메뉴_SNS -->
+        <div id="social">
+            <div>
+                <a href="#"><img src="img/instagram.jpeg" style="width:100%"/></a>
+              </div>
+              <div>
+                <a href="#"><img src="img/facebook.jpeg" style="width:100%"/></a>
+              </div>
+              <div>
+                <a href="#"><img src="img/kakao.jpeg" style="width:100%"/></a>
+              </div>
+        </div> 
+        <!-- 우측퀵메뉴_고객센터 -->
+        <div id="cs">
+            <div class="title">CS CENTER</div>
+            <div class="phone"><a href="tel:010-0000-0000">010-0000-0000</a></div>
+            <div class="txt">
+                <p>MON - SUN<span>24시간 상담 가능</span></p>
+                 <p>LUNCH<span>PM 12:00 - PM 01:00</span></p>
+                <p>SAT, SUN, HOLIDAY CLOSED</p>
+            </div>    
+        </div>
+        <!-- 우측퀵메뉴_은행 -->
+        <div id="bank">
+            <div class="title">BANK INFO</div>
+            <div class="txt">
+               <p>국민<span>000000-00-000000</span></p>
+                <p>우리은행<span>1000 200 000010</span></p>
+                <p class="last">예금주<span></span>000</p>
+            </div>
+        </div>
+    </div>
+    <!-- 퀵메뉴버튼 -->
+    <div id="quick_btn_wrap">
+        <div id="quick_btn">
+            <div class="quick_close"><span class="quick_close_btn"></span></div>
+            <p><a href="#"></a></p>
+        </div>   
+    </div>
+</div>
+</head>
+<body>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+
+            jQuery( "#quick_btn" ).toggle(
+                function() {
+                    jQuery( "#quick_wrap" ).animate({right: '-180px'}, 500 ); 
+                    jQuery( "#quick_btn" ).html('<div class="quick_open"><div class="quick_button_btn"></div></div>');
+                },
+                function() {
+                    jQuery( "#quick_wrap" ).animate({right: '-0px'}, 500 ); 
+                    jQuery( "#quick_btn" ).html('<div class="quick_close"><div class="quick_close_btn"></div></div>');
+                }
+            );
+        });
+    </script>
+
+
+</body>
+</html>

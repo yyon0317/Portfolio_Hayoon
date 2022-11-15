@@ -1,0 +1,380 @@
+@charset "utf-8";
+
+#wrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.header {
+    width: 100%;
+    height: auto;
+    background: #000;
+}
+.header .inner-header {
+    margin: 0 auto;
+}
+
+/*top*/
+.header .inner-header .topmenu {
+    width: 100%;
+    height: auto;
+}
+.header .inner-header .topmenu::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*span menu*/
+.header .inner-header .topmenu span.menu {
+    display: none;
+}
+.header .inner-header .topmenu h1.logo {
+    width: 200px;
+    height: 80px;
+    margin: 0 auto;
+}
+.header .inner-header .topmenu h1.logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*middle*/
+.header .inner-header .middlemenu {
+    width: 100%;
+    height: 16px;
+    /*    float: right;*/
+    /*    margin-top: 8px;*/
+}
+.header .inner-header .middlemenu .middle-con::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.header .inner-header .middlemenu .middle-con {
+    width: 200px;
+    float: right;
+    box-sizing: border-box;
+}
+.header .inner-header .middlemenu .middle-con ul > li {
+    width: 33.3333%;
+    float: left;
+    position: relative;/**/
+}
+.header .inner-header .middlemenu .middle-con ul > li > a img {
+    width: 16px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    box-sizing: border-box;
+}
+.header .inner-header .middlemenu .middle-con ul > li span.sub {
+    color: #fff;
+    width: 40px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 8px;
+    display: none;
+    font-weight: lighter;
+    line-height: 13px;
+    position: absolute;/**/
+    left: 50%;/**/
+    margin-left:-20px;/**/
+    top: 20px;/**/
+}
+.header .inner-header .middlemenu .middle-con ul > li > a img:hover {
+    transition: all 0.2s;
+    transform: translate(0px, -1px);
+}
+
+/*bottom*/
+.header .inner-header .bottommenu {
+    height: 50px;
+    width: 100%;
+}
+.header .inner-header .bottommenu .gnb {
+    width: 100%;
+    height: 50px;
+}
+.header .inner-header .bottommenu .gnb .gnb-center::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.header .inner-header .bottommenu .gnb .gnb-center {
+    width: 800px;
+    margin: 0 auto
+}
+.header .inner-header .bottommenu .gnb .gnb-center::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.header .inner-header .bottommenu .gnb .gnb-center ul > li {
+    width: 16.6666%;
+    line-height: 50px;
+    float: left;
+}
+.header .inner-header .bottommenu .gnb .gnb-center ul > li > a {
+    font-size: 13px;
+    margin: 0 auto;
+    color: #fff;
+    display: block;
+    text-align: center;
+}
+.header .inner-header .bottommenu .gnb .gnb-center ul > li:nth-child(1){
+    text-decoration: underline;
+}
+.header .inner-header .bottommenu .gnb .gnb-center ul > li:nth-child(5){
+    text-decoration: underline;
+}
+.header .inner-header .bottommenu .gnb .gnb-center ul > li > a:hover {
+    transition: all 0.2s;
+    transform: translate(0px, -1px);
+}
+.header .inner-header .bottommenu .gnb::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.header .inner-header .bottommenu .gnb .gnb-left {
+    width: 100px;
+    float: left;
+    margin-top: -50px;
+}
+.header .inner-header .bottommenu .gnb .gnb-left::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.header .inner-header .bottommenu .gnb .gnb-left ul > li {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+.header .inner-header .bottommenu .gnb .gnb-left ul > li > a {
+    font-size: 12px;
+    color: #fff;
+    line-height: 50px;
+}
+.header .inner-header .bottommenu .gnb .gnb-left ul > li > a{
+    text-decoration-line: underline;
+}
+.header .inner-header .bottommenu .gnb-left > ul > li:hover {
+    transition: all 0.2s;
+    transform: translate(0px, -1px);
+}
+
+/*sub menu*/
+.submenu {
+    width: 100%;
+    height: auto;
+    display: none;
+    background: #fff;
+    position: fixed;
+    top: 148px;
+    left: 0;
+    z-index: 30;
+}
+.submenu .inner-submenu {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+}
+.submenu .inner-submenu .subgnb::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.submenu .inner-submenu .subgnb > ul > li {
+    width: 16.6666%;
+    height: auto;
+    float: left;
+    text-align: center;
+}
+.submenu .inner-submenu .subgnb > ul > li>a:hover{
+    font-weight: bold;
+}
+.submenu .inner-submenu .subgnb > ul > li > a {
+    line-height: 40px;
+    font-size: 13px;
+}
+
+/*ad*/
+.ad {
+    width: 100%;
+    height: 20px;
+    margin: 0 auto;
+    background: #fcf9ee;
+}
+.ad .adt {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+.ad:hover {
+    cursor: pointer;
+    background: #000;
+    color: #ccc;
+}
+.leftxmenu{
+    display: none;
+    cursor: pointer;
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    /*middle*/
+    .header .inner-header .middlemenu .middle-con {
+        width: 130px;
+    }
+    .header .inner-header .middlemenu .middle-con ul > li > a img {
+        width: 15px;
+    }
+    .header .inner-header .middlemenu .middle-con ul > li span.sub {
+        visibility: hidden;
+        display: none;
+    }
+    .header .inner-header .topmenu span.menu {
+        display: none;
+        visibility: hidden;
+    }
+
+    /*bottom*/
+    .header .inner-header .bottommenu {
+        height: 45px;
+        width: 100%;
+    }
+    .header .inner-header .bottommenu .gnb .gnb-center {
+        width: 700px;
+        margin: 0 auto;
+    }
+    .header .inner-header .bottommenu .gnb .gnb-center ul > li {
+        height: 40px;
+        line-height: 40px;
+    }
+    .header .inner-header .bottommenu .gnb .gnb-center ul > li > a {
+        font-size: 12px;
+    }
+    .header .inner-header .bottommenu .gnb .gnb-left {
+        height: 30px;
+        margin-top: -60px;
+        width: 70px
+    }
+    .header .inner-header .bottommenu .gnb .gnb-left ul > li {
+        width: 50%;
+        height: 30px;
+    }
+    .header .inner-header .bottommenu .gnb .gnb-left ul > li > a {
+        font-size: 11px;
+        color: #fff;
+        line-height: 30px;
+    }
+
+    /*sub menu*/
+    .submenu {
+        top: 129.5px;
+    }
+    .submenu .inner-submenu {
+        max-width: 700px;
+    }
+    .submenu .inner-submenu .subgnb > ul > li > a {
+        line-height: 35px;
+        font-size: 11px;
+    }
+    
+    /*ad*/
+    .ad .adt {
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width:767px) {
+    .header .inner-header .middlemenu {
+        display: none;
+    }
+    .header .inner-header .bottommenu {
+        height: 0px;
+    }
+    .header .inner-header .bottommenu .gnb .gnb-right {
+        display: none ;
+    }
+    .submenu {
+        display: none;
+        visibility: hidden;
+    }
+    .header .inner-header .topmenu {
+        height: 60px !important;
+        margin: 0 auto;
+    }
+    .header .inner-header .topmenu h1.logo img {
+        width: 190px;
+        height: 60px;
+        margin: 0 auto;
+    }
+    .header .inner-header .topmenu span.menu {
+        display: block;
+         width: 40px;
+        height: 50px;
+         cursor: pointer;
+    margin-top: -78px;
+    }
+    .header .inner-header .topmenu span.menu img {
+        display: block;
+        width: 50px;
+    }
+    .header .inner-header .bottommenu .gnb {
+        position: fixed !important;
+        width: 80%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: block;
+        z-index: 100;
+        position: absolute;
+        left: -800px;
+    }
+    .header .inner-header .bottommenu .gnb .gnb-center {
+        position: fixed;
+        width: 80%;
+        height: auto;
+        display: block;
+        z-index: 100;
+        margin: 60px 0px;
+    }
+    .header .inner-header .bottommenu .gnb .gnb-center ul > li {
+        width: 100%;
+        height: 60px;
+    }
+    .header .inner-header .bottommenu .gnb .gnb-center ul > li>a{
+        font-size: 18px;
+    }
+    .ad {
+        display: none;
+    }
+	.header .inner-header .bottommenu .gnb .gnb-left {
+		width: 80%;
+		height: auto;
+		float: none;
+		margin-top: 0px;
+		position: fixed;
+		display: block;
+		z-index: 100;
+	}
+	.header .inner-header .bottommenu .gnb .gnb-left ul > li {
+		width: 50%;
+	}
+	.header .inner-header .bottommenu .gnb .gnb-left ul > li > a {
+		font-size: 18px;
+	}
+	.leftxmenu{
+		display: block;
+		position: absolute;
+		top: -40px;
+		left: 10px;
+	}
+
+}

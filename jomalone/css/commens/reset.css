@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;  
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight:lighter;
+    
+}
+ol,ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+img{
+   border: 0; 
+}
+header,section,nav,aside,article,main{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

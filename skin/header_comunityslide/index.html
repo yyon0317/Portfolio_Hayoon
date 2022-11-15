@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+
+    <style>
+      /*reset*/
+      * {margin: 0;padding: 0;box-sizing: border-box;}
+        ul,ol,li {list-style: none;}
+        a {text-decoration: none;color: #000;}
+        html,body {font-size: 20px;width: 100%;height: 100%;}
+        img {border: 0;}
+
+        .logo{
+            width: 100%;
+            height: 100px;
+            margin:  0 auto;
+        } 
+        .logo>a>img{
+            margin:  0 auto;
+            display: block;
+        }
+        header{
+            border-bottom: 1px solid rgb(81, 81, 81);
+            border-top: 1px solid rgb(81, 81, 81);
+            box-sizing: border-box;
+            width: 100%;
+            height: 50px;
+        }
+        .in-header{
+            width: 80%;
+            height: 50px;
+            margin:  0 auto;
+        }
+        .in-header>ul>li{
+            float: left;
+            width: 12.5%;
+            font-size: 15px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .in-header>ul>li:nth-child(8){
+            background: #000;
+            color: #fff;
+            box-sizing: border-box;
+            position: relative;
+            left: 0;
+            top: 0;
+        }
+        .in-header>ul>li:nth-child(8)>a{
+            color: #fff;
+        }
+        .in-header>ul>li:nth-child(8)>.board>li>a{
+            color: #fff;
+        }
+        .board1{
+            position: absolute;
+            left: 80%;
+            top: 50px;
+            background-color: #000;
+            width: 100%;
+        }
+        .board1>li>a{
+            color: #fff;
+        }
+
+
+</style>
+
+</head>
+<body>
+    <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
+    <header>
+        <div class="in-header">
+            <ul id="incomunity">
+                <li><a href="#">신상품</a></li>
+                <li><a href="#">상품분류</a></li>
+                <li><a href="#">상품분류</a></li>
+                <li><a href="#">상품분류</a></li>
+                <li><a href="#">상품분류</a></li>
+                <li><a href="#">상품분류</a></li>
+                <li><a href="#">상품분류</a></li>
+                <li id="incomunity_a"><a href="javascript:;">커뮤니티</a>
+                    <ul class="board">
+                        <li><a href="#">공지사항</a>
+                            <ul class="board1">
+                                <li><a href="#">공지사항</a></li>
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">검수영상</a></li>
+                                <li><a href="#">이벤트</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Q&A</a></li>
+                        <li><a href="#">검수영상</a></li>
+                        <li><a href="#">이벤트</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+$(function(){
+    $('#incomunity').droppy();
+  });
+$.fn.droppy = function() {  
+  this.each(function() {    
+    var root = this, zIndex = 1000;    
+    function getSubnavi(ele) {
+      if (ele.nodeName.toLowerCase() == 'li') {
+        var subnavi = $('> ul', ele);
+        return subnavi.length ? subnavi[0] : null;
+      } else {
+        return ele;
+      }
+    }    
+    function getActuator(ele) {
+      if (ele.nodeName.toLowerCase() == 'ul') {
+        return $(ele).parents('li')[0];
+      } else {
+        return ele;
+      }
+    }    
+    function hide() {
+      var subnavi = getSubnavi(this);
+      if (!subnavi) return;
+      $.data(subnavi, 'cancelHide', false);
+      setTimeout(function() {
+        if (!$.data(subnavi, 'cancelHide')) {
+          $(subnavi).slideUp(0);
+        }
+      }, 150);
+    }  
+    function show() {
+      var subnavi = getSubnavi(this);
+      if (!subnavi) return;
+      $.data(subnavi, 'cancelHide', true);
+      $(subnavi).css({zIndex: zIndex++}).slideDown(0);
+      if (this.nodeName.toLowerCase() == 'ul') {
+        $(getActuator(this)).addClass('hover');
+      }
+    }    
+    $('ul, li', this).hover(show, hide);
+    $('li', this).hover(
+      function() { $(this).addClass('hover'); },
+      function() { $(this).removeClass('hover'); }
+    );    
+  });  
+};
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
