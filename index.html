@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<title>YOONHAYOON</title>
 	<link rel="stylesheet" href="css/index.css">
-
-	<script src="js/jquery-3.6.0.min.js"></script>
-	<script src="js/jquery.js"></script>
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/main.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
-
 <body>
-
 	<div id="wrap">
+		<!-- hscroll -->
 		<div class="hscroll">
 			<div class="progress-container">
 				<div class="progress-bar" id="myBar"></div>
 			</div>
 		</div>
+		<!-- visual main -->
 		<div class="vh">
+			<!-- slide -->
 			<div class="slide">
 				<ul class="inslide">
 					<li class="book book1">
@@ -30,42 +29,20 @@
 						<div class="title">WEBPUBLISHER <span>TALBLEOFCONTENTS</span></div>
 					</li>
 					<li class="book book2">
-						<nav>
-							<ul>
-								<li>
-									<button data-animation-scroll="true" data-target="#about">
-										ABOUT ME
-									</button>
-								</li>
-								<li>
-									<button data-animation-scroll="true" data-target="#work">
-										WORK
-									</button>
-								</li>
-								<li>
-									<button data-animation-scroll="true" data-target="#career">
-										CAREER
-									</button>
-								</li>
-								<li>
-									<button data-animation-scroll="true" data-target="#contect">
-										CONTECT
-									</button>
-								</li>
-							</ul>
-						</nav>
+						<ul>
+							<li><button data-animation-scroll="true" data-target="#about">ABOUT ME</button></li>
+							<li><button data-animation-scroll="true" data-target="#work">WORK</button></li>
+							<li><button data-animation-scroll="true" data-target="#career">CAREER</button></li>
+							<li><button data-animation-scroll="true" data-target="#contect">CONTECT</button></li>
+						</ul>
 					</li>
 				</ul>
 			</div>
-
-			<header>
-				<div class="in-header">
-					<div class="logo">
-						<a href="index.html"> <img src="img/logo1.png" alt="logo"></a>
-					</div>
-				</div>
-			</header>
-
+			<!-- header -->
+			<div class="header">
+				<div class="logo"><a href="index.html"> <img src="img/logo1.png" alt="logo"></a></div>
+			</div>
+			<!-- ontents1 -->
 			<div class="contents1">
 				<div class="in-contents1">
 					<div class="con1">
@@ -75,15 +52,13 @@
 					</div>
 					<div class="con2">
 						<div class="text">
-							Hello! Im <span>Ha Yoon</span> <br>
-							I want to be a<br>
-							<span>Growing Web Design.</span><br>
-							<hr>
+							Hello! Im <span>Ha Yoon</span><br>I want to be a<br><span>Growing Web Design.</span><br><hr>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<!-- contents2 -->
 		<div class="contents2" id="about">
 			<div class="in-contents2">
 				<div class="title">
@@ -111,13 +86,12 @@
 							<li><img src="img/arrow_1.png" alt="arrow"></li>
 						</ul>
 					</div>
-					<hr style="width: 10%; margin-bottom: 20px;">
-					<div class="title">안녕하세요:) 빠른 습득력과 기본기를 탑재한 윤하윤입니다!</div>
-					<br>
+					<div class="title">안녕하세요:) 빠른 습득력과 기본기를 탑재한 윤하윤입니다!</div><br>
 					<div class="text">디자인을 전공하면서 다양한 작업들로 다듬어진 저만의 스킬과<br>
-						UI/UX를 학습한 경험을 통해 한 층 더 업그레이드된 디자인을 구현할 수 있습니다.<br>
-						또한, 웹 코딩능력은 HTML/CSS로 구조를 짜고 JavaScript/ j-query를 사용해서<br>
-						동적으로 코드를 작성하고 반응형 디자인을 할 수 있습니다.<br>
+						UI/UX를 학습으로 한 층 더 업그레이드된 디자인을 구현할 수 있습니다.<br>
+						웹퍼블리싱 HTML/CSS로 웹표준 및 접근성을 이해하고 반응형제작<br>
+						JavaScript/j-query라이브러리 및 플러그인을 이용한 UI구현을 할 수 있습니다.<br>
+						GIT을 활용한 협업툴 사용 가능합니다.<br>
 						웹 퍼블리싱 교육과 다양한 웹페이지를 구현하면서 저의 웹 코딩 능력을 향상시켰습니다.<br>
 						신입이지만 웹퍼블리싱 역량을 향상시키고 능력을 발휘하고자 지원했습니다.</div>
 				</div>
@@ -146,9 +120,10 @@
 							</div>
 							<div class="text_1">
 								● slide 구현<br>
-								● jQuery 문법 및 함수 적용 가능<br>
+								● 문법 및 함수 적용 가능<br>
 								● 기본적인 문법과 기초 이해<br>
 								● JS 라이브러리 및 플러그인 사용<br>
+								● Ajax로 서버와 통신하는법<br>
 								● Github 활용
 							</div>
 						</li>
@@ -158,24 +133,23 @@
 							</div>
 							<div class="text_1">
 								● Photoshop<br>
-								● Illustrator
+								● Illustrator<br>
+								● Figma
 							</div>
 						</li>
 					</ul>
-					
 				</div>
 				<div class="git">
 					<a href="https://github.com/yyon0317">**GITHUB LINK SOURCES CODE VIEW</a>
 				</div>
 			</div>
 		</div>
-
+		<!-- contents3 -->
 		<div class="contents3" id="work">
 			<div class="in-contents3">
 				<div class="title">
 					<div class="work">02</div>
-					<div class="work" data-animation-scroll="true" data-target="#work">
-						HOW IT WORKS</div>
+					<div class="work" data-animation-scroll="true" data-target="#work">HOW IT WORKS</div>
 					<div class="work">···</div>
 				</div>
 				<div class="swiper-container">
@@ -185,10 +159,9 @@
 								<img src="img/con1.png" alt="con1">
 								<div class="title">#01 JO MALONE WEBSITE(기여도100%)</div><br>
 								<div class="skill">PUBLISHER<br>RESPONSIVE WEBSITE<br>SKILL : HTML5, CSS3, JAVA SCRIPT, JQUERY, Illustrator, Photoshop</div><br>
-								<div class="text">기존 사이트를 기본적인 구조로 새롭게 디자인한 사이트 입니다.(UI&UX)
-									디자인시안부터 반응형으로 제작한 사이트로 PC, TABLET. MOBILE 로 구성 되어 있습니다.
-									사진편집 및 보정과 아이콘을 제작하였습니다.
-									태그의 의미와 구조를 이해하고 웹표준과 웹접근성의 구조에 맞는 코드로 작성했습니다.</div><br>
+								<div class="text">웹표준과 접근성을 최대한 준수하는 방향으로 디자인시안부터 
+									퍼블리싱을 하였으며, 반응형으로 제작한 사이트로 PC, TABLET. MOBILE 로 구성 되어 있습니다.
+									회원가입/로그인 페이지에 JavaScript 정규식 형식을 사용했습니다. </div><br>
 								<div class="link">
 									<ul>
 										<li><a href="jomalone/index.html">MAIN</a></li>
@@ -199,7 +172,7 @@
 									</ul>
 								</div>
 								<div class="gitsub">
-									<a href="https://github.com/yyon0317/Portfolio_Hayoon/tree/main/jomalone">**GITHUB LINK SOURCES CODE VIEW</a>
+									<a href="https://github.com/yyon0317/Portfolio_Hayoon/tree/main/jomalone">**GITHUB SOURCES</a>
 								</div>	
 							</div>
 						</div>
@@ -208,10 +181,10 @@
 								<img src="img/con2.png" alt="con2">
 								<div class="title">#02 BOSE(기여도100%)</div><br>
 								<div class="skill">PUBLISHER<br>RESPONSIVE WEBSITE<br>SKILL : HTML5, CSS3, JAVA SCRIPT, JQUERY, Illustrator, Photoshop</div><br>
-								<div class="text">기존 사이트를 기본적인 구조로 새롭게 디자인한 사이트 입니다.(UI&UX)
-									디자인시안부터 반응형으로 제작한 사이트로 PC, TABLET. MOBILE 로 구성 되어 있습니다.
-									swiper로 사용해 오토 갤러리로 적용하고
-									스크롤시 시간차나타나는 애니매이션 효과를 넣어 동적인 레이아웃으로 디자인하였습니다.</div><br>
+								<div class="text">
+									태그의 의미와 구조를 이해하고 디자인시안부터 반응형으로 제작한 사이트로 PC, TABLET. MOBILE 로 구성 되어 있습니다.
+									슬라이드는 Swiper Slide Plugin을 사용하여 구현하고,Jquery Scroll Event로
+									스크롤시 시간차 나타나는 애니매이션 효과를 넣어 동적인 레이아웃으로 디자인하였습니다.</div><br>
 								<div class="link">
 									<ul>
 										<li><a href="BOSE/index.html">MAIN</a></li>
@@ -219,7 +192,7 @@
 									</ul>
 								</div>
 								<div class="gitsub">
-									<a href="https://github.com/yyon0317/Portfolio_Hayoon/tree/main/BOSE">**GITHUB LINK SOURCES CODE VIEW</a>
+									<a href="https://github.com/yyon0317/Portfolio_Hayoon/tree/main/BOSE">**GITHUB SOURCES</a>
 								</div>
 							</div>
 						</div>
@@ -238,16 +211,15 @@
 									</ul>
 								</div>
 								<div class="gitsub">
-									<a href="https://github.com/yyon0317/Portfolio_Hayoon/tree/main/cassina">**GITHUB LINK SOURCES CODE VIEW</a>
+									<a href="https://github.com/yyon0317/Portfolio_Hayoon/tree/main/cassina">**GITHUB SOURCES</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				
 			</div>
 		</div>
-
+		<!-- contents4 -->
 		<div class="contents4" id="career">
 			<div class="in-contents4">
 				<div class="title">
@@ -312,7 +284,7 @@
 				</div>
 			</div>
 		</div>
-
+		<!-- footer -->
 		<div class="footer" id="contect">
 			<div class="in-footer">
 				<div class="text">
@@ -321,6 +293,5 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
 </body></html>
