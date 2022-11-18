@@ -2,8 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500&display=swap');
 
 /*reset*/
-*{margin: 0;padding: 0;font-family: 'Montserrat','Gothic A1', sans-serif;
-	}
+*{margin: 0;padding: 0;font-family: 'Montserrat','Gothic A1', sans-serif;}
 html,body{width: 100%;height: 100%;  }
 ol,ul,li{list-style: none;}
 a{text-decoration: none;color: #000;}
@@ -38,9 +37,7 @@ button{border: 0; background: none;}
 	background: #ea543c;
 	width: 0%;
 }
-
 /*slide*/
-
 .vh{
 	height: 100vh;
 	background: #131416;
@@ -110,13 +107,13 @@ button{border: 0; background: none;}
 	margin-left: 50px;
 	border-radius: 0px;
 }
-.book2 nav ul{
+.book2 ul{
 	width: 80%;
 	margin: 0 auto;
 	height: 850px;
 	padding-top: 200px;
 }
-.book2 nav ul li{
+.book2 ul li{
 	position: relative;
 	width: 100%;
 	height: 60px;
@@ -125,7 +122,7 @@ button{border: 0; background: none;}
 	margin-bottom: 30px;
 	border-radius: 10px;
 }
-.book2 nav ul li >button::before{
+.book2 ul li >button::before{
 	content: '';
 	display: block;
 	width: 0;
@@ -136,10 +133,10 @@ button{border: 0; background: none;}
 	top: 100%;
 	transform: translateY(-50%);
 	z-index: 0;
-	transition: all 0.2s; 
+	transition: all 0.8s; 
 }
-.book2 nav ul li >button:hover::before{width:100%;}
-.book2 nav ul li button{
+.book2 ul li >button:hover::before{width:100%;}
+.book2 ul li button{
 	color: #fff;
 	width: 100%;
 	height: 50px;
@@ -147,38 +144,23 @@ button{border: 0; background: none;}
 	font-weight: 300;
 	cursor: pointer;
 }
-
 /*header*/
-header{
-	width: 100%;
-	height: 90px;
-	background: #131416;
-}
-.in-header{
+.header{
 	width: 95%;
 	margin: 0 auto;
 }
-.in-header>.logo{
+.header>.logo{
 	width: 60px;
-	height: 90px;
-}
-.in-header>.logo>a>img{
-	display: block;
+	height: 30px;
 	padding: 30px 0px;
 }
 /*contents1*/
-.contents1{
-	width: 100%;
-	height: auto;
-	background: #131416;
-}
 .in-contents1{
 	width: 95%;
 	height: 850px;
 	margin: 0 auto;
 }
 .in-contents1>.con1{
-	float: right;
 	width: 100%;
 	height: 175px;
 	text-align: right;
@@ -197,17 +179,12 @@ header{
 }
 .in-contents1>.con2{
 	width: 1300px;
-	height: 630px;
-	overflow: hidden;
 	padding-top: 150px;
 	padding-left: 100px;
-	animation:top1 .5s;
 }
 .in-contents1>.con2>.text{
 	font-size: 80px;
-	color: rgba(242, 242, 242, 0.8);
-	letter-spacing :0.0000005em;
-	line-height: 100px;
+	color: #f2f2f2cc;
 	font-weight: 300;
 }
 .in-contents1>.con2>.text>span{
@@ -216,11 +193,10 @@ header{
 	font-weight: 500;	
 }
 .in-contents1>.con2>.text>hr{
-	width: 80%;
+	width: 85%;
 	margin-top: 15px;
 	border:1px solid #EA543C;
 }
-
 /*contents2*/
 .contents2{
 	width: 100%;
@@ -236,14 +212,11 @@ header{
 	border: 1px solid #ddd;
 }
 .in-contents2 >.title{
-    width: 100%;
     height: 60px;/*86*/
 	border-top: 1px solid  #e4e4e4 ;
 	border-bottom: 1px solid #e4e4e4 ;
 	padding-top: 15px;
-}
-.in-contents2 .about:nth-child(1){
-	margin-left: 50px;
+	padding-left: 50px;
 }
 .in-contents2 .about:nth-child(2){
 	cursor: pointer;
@@ -263,7 +236,6 @@ header{
 }
 .in-contents2 >.con1{
     width: 50%;
-    height: 500px;
 	box-sizing: border-box;
 	float: left;
 	padding: 5% 6% 0% 10%;
@@ -293,11 +265,7 @@ header{
 	padding: 3px 10px;
 	margin: 3px 2px;
 }
-.in-contents2 >.con1 > .keyword>ul > li>img{
-	display: block;
-}
 .in-contents2 >.con1 >.title{
-	width: 100%;
 	font-weight: 600;
 }
 .in-contents2 >.con2{
@@ -308,30 +276,24 @@ header{
 	padding: 7% 10% 0% 2%;
 	font-size: 15px;
 }
-.in-contents2 >.con2 >.text{
-	margin-bottom: 20px;
-}
 .in-contents2 >.con2 > ul{
 	width: 100%;
+	margin-top: 20px;
 }
 .in-contents2 >.con2 > ul >li{
 	width: 31.3333%;
 	float: left;
-	position: relative;
 }
 .in-contents2 >.con2 > ul >li:nth-child(2){
-	padding-left: 1%;
-	padding-right: 1%;
+	padding: 0 1% 0 1%;
 }
 .in-contents2 >.con2 > ul >li >.dubble{
 	width: 100%;
 	padding-top: 10px;
 	text-align: center;
-	z-index: 1;
 	height: 30px;
 	color: #fff;
-	border-radius: 10PX;
-	position: relative;
+	border-radius: 10px;
 	background: #EA543C;
 }
 .in-contents2 >.con2 > ul >li >.dubble::after{
@@ -353,11 +315,7 @@ header{
 	float: left;
 	margin-left: 20px;
 	text-align: center;
-	color: #131416;
-	line-height: 0px;
-	padding: 0px 5px;
 	font-size: 20px;
-	display: block;
     font-weight: 500;
 }
 .git>a::before{
@@ -368,9 +326,7 @@ header{
     background: #EA543C;
     position: relative;
     left: 0;
-    top: 25px;
-    transform: translateY(-50%);
-    z-index: 0;
+    top: 35px;
     transition: all 0.5s;
 }
 .git>a:hover::before{width:100%;}
@@ -378,11 +334,6 @@ header{
 /*contents3*/
 .contents3{
 	width: 100%;
-	height: auto;
-	box-sizing: border-box;
-	position: relative;
-	left: 0;
-	top: 0;
 	padding-bottom: 50px;
 	padding-top: 150px;
 }
@@ -416,18 +367,9 @@ header{
 	font-size:20px;/*30*/
     float: left;
 	border: 1px solid rgb(176, 176, 176);
-	box-sizing: border-box;
 	padding: 8px 18px;
 	border-radius: 28px;
 	margin-right: 10px;
-}
-.in-contents3 .line{
-	border: 1px solid #666;
-    width: 15%;
-    float: left;
-    margin-top:15px;
-	margin-left: 20px;
-	box-sizing: border-box;
 }
 /*swiper*/
 .swiper-wrapper{
@@ -436,7 +378,6 @@ header{
 .swiper-container {
 	width: 100%;
 	height: 850px;
-	/*overflow: hidden;*/
 	cursor: pointer;
 }
 .swiper-slide {
@@ -520,9 +461,6 @@ header{
 .in-contents3 .gitsub>a:hover{
 	color: #EA543C;
 }
-.in-contents3 .gitsub.button:hover{
-	color: #EA543C;
-}
 .swiper-slide .con .link ul>li{
 	float: left;
 	width: 25%;
@@ -553,7 +491,7 @@ header{
 	width: 100%;
 	height: auto;
 	position: relative;
-	left: 0%;
+	left: 0;
 	top: 0;
 	padding: 50px 0px;
 }
@@ -571,7 +509,7 @@ header{
 	padding-top: 15px;
 }
 .in-contents4 .career{
-	font-size:20px;/*30*/
+	font-size:20px;
     float: left;
 	border: 1px solid rgb(176, 176, 176);
 	box-sizing: border-box;
@@ -580,7 +518,7 @@ header{
 	margin-right: 10px;
 }
 .in-contents4 .career:nth-child(1){
-	margin-left: 1520px;
+	margin-left: 1470px;
 }
 .in-contents4 .career:nth-child(2){
 	cursor: pointer;
@@ -589,19 +527,8 @@ header{
 	color: #fff; 
 	background-color: #EA543C;
 }
-.in-contents4 .line{
-    border: 1px solid #666;
-    width: 50%;
-    float: left;
-    margin-top:16px;
-	margin-left: 20px;
-	box-sizing: border-box;
-	border: 1px solid;
-	box-sizing: border-box;
-}
 .in-contents4 >.con1{
     width: 53%;
-    height: 400px;
 	box-sizing: border-box;
 	float: left;
 	padding: 7% 6% 0% 10%;
@@ -633,11 +560,9 @@ header{
 }
 .in-contents4 >.con2{
     width: 45%;
-    height: 400px;
 	float: right;
 	box-sizing: border-box;
 	padding: 5% 5% 0% 2%;
-
 }
 .in-contents4 >.con2 > .banner{
 	width: 40%;
@@ -661,7 +586,6 @@ header{
 .in-contents4 >.con2 > .banner >.text{
 	font-size: 16px;
 	width: 100%;
-	padding: 0px 0px 0px -10px;
 	text-align: right;
 	line-height: 19px;
 	font-weight: 300;

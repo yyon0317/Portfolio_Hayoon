@@ -1,54 +1,18 @@
 jQuery(document).ready(function () {
-
-
-	/* 애니메이션 스크롤 이동 */
-	const animationMove = function (selector) {
-		// ① selector 매개변수로 이동할 대상 요소 노드 가져오기
-		const targetEl = document.querySelector(selector);
-		// ② 현재 브라우저의 스크롤 정보(y 값)
-		const browserScrollY = window.pageYOffset;
-		// ③ 이동할 대상의 위치(y 값)
-		const targetScorllY = targetEl.getBoundingClientRect().top + browserScrollY;
-		window.scrollTo({
-			top: targetScorllY,
-			behavior: 'smooth'
-		});
-	};
-	// 스크롤 이벤트 연결하기
-	const scollMoveEl = document.querySelectorAll("[data-animation-scroll='true']");
-	for (let i = 0; i < scollMoveEl.length; i++) {
-		scollMoveEl[i].addEventListener('click', function (e) {
-			const target = this.dataset.target;
-			animationMove(target);
-		});
-	}
-
-
-	/*scroll active*/
-	$(window).scroll(function () {
-		var win_top = $(window).scrollTop()
-		var win_h = $(window).height()
-
-		$('.in-contents1 > .con2').each(function () {
-			var box_top = $(this).offset().top
-			if (win_top >= box_top - 800) {
-				$(this).addClass('active')
-			}
-		});
+	
+	//menu 자바스크립트
+	document.querySelector('.book1').addEventListener('click',function(){
+		document.querySelector('.inslide').classList.toggle('on');
 	});
-
-
-
-	$('.book1').on('click', function () {
-		$(".inslide").toggleClass('on');
-	})
-
+	//menu 제이쿼리
+	// $('.book1').on('click', function () {
+	// 	$(".inslide").toggleClass('on');
+	// })
 
 	// When the user scrolls the page, execute myFunction 
 	window.onscroll = function () {
 		myFunction()
 	};
-
 	function myFunction() {
 		var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
 		var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -56,8 +20,7 @@ jQuery(document).ready(function () {
 		document.getElementById("myBar").style.width = scrolled + "%";
 	}
 
-
-	//contents3
+	//contents3 slide
 	var SlideList = new Swiper('.swiper-container', {
 		//기본 셋팅
 		//방향 셋팅 vertical 수직, horizontal 수평 설정이 없으면 수평const swiper
@@ -76,7 +39,6 @@ jQuery(document).ready(function () {
 		centeredSlides: true,
 		// 페이지 전환효과 slidesPerView효과와 같이 사용 불가
 		// effect: 'fade',
-
 
 		//자동 스크를링
 		autoplay: {
@@ -103,11 +65,6 @@ jQuery(document).ready(function () {
 
 	});
 
-
-
-
-
-
 	var currentSlide = $(SlideList.slides[SlideList.activeIndex])
 	var prevSlide;
 	var nextSlide
@@ -126,8 +83,6 @@ jQuery(document).ready(function () {
 			$(currentSlide).removeClass('off')
 		}
 	});
-
-
 
 	$(".swiper-slide >.con3>img").hover(function () {
 		$(".swiper-slide >.con3>img").attr('src', "img/con3-3.png");
@@ -149,7 +104,7 @@ jQuery(document).ready(function () {
 
 
 
-
+	//banner ajax
 	$.ajax({
 		url: "banner.html", // html 파일 내용을 데이터로 사용
 		dataType: "html", // 파일 형식 console.log($data[getNum]);
@@ -175,12 +130,8 @@ jQuery(document).ready(function () {
 					'background-size': 'cover'
 				});
 			}
-
-
 		}
 	});
-
-
 
 	$('.next').click(function () {
 		var galleryli = $('.in-imgslide>ul>li');
@@ -192,10 +143,6 @@ jQuery(document).ready(function () {
 		$('.in-imgslide>ul').prepend(galleryli.eq(lastnum));
 	});
 
-
-
-
-
 	//contents4 
 	$('.popupimg>.close').click(function () {
 		$('.popupimg').fadeOut(500);
@@ -203,9 +150,5 @@ jQuery(document).ready(function () {
 	$('.banner.box1').click(function () {
 		$('.popupimg').fadeIn(500);
 	});
-
-
-
-
 
 })
