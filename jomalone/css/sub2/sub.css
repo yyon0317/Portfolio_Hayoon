@@ -8,32 +8,19 @@
 .subcontents1{
     width: 100%;
     height: auto;
-    box-sizing: border-box;
     margin-top: 50px;
 }
 .subcontents1 .inner-subcontents1{
-    width: 100%;
-    height: auto;
-}
-.subcontents1 .inner-subcontents1 .con1{
-    width: 100%;
-    height: auto;
     max-width: 1000px;
     margin: 0 auto;
 }
-.subcontents1 .inner-subcontents1 .con1 .title{
-    width: 100%;
-    height: auto;
+.subcontents1 .inner-subcontents1 .title{
     text-align: center;
     font-size: 38px;
-    margin: 0 auto;
 }
-.subcontents1 .inner-subcontents1 .con1 .text{
-    width:100%;
-    height: auto;
+.subcontents1 .inner-subcontents1 .text{
     text-align: center;
     font-size: 20px;
-    margin: 0 auto;
     padding-top: 5px;
 }
 
@@ -41,89 +28,59 @@
 .subcontents2{
     width: 100%;
     height: auto;
+    margin-top: 50px;
 }
-.subcontents2 .inner-subcontents{
-    width: 100%;
-    height: auto;
-    margin-top: 100px;
-}
-.con1{
-    width: 100%;
-    height: auto;
-}
-.con1 .img{
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-}
-.con1 .img img{
+.subcontents2 img{
     width: 100%;
     height: auto;
     display: block;
-}
-.con2{
-    width: 80%;
-    height: auto;
     margin: 0 auto;
-    margin-top: 20px;
 }
-.con2 .title{
+.inner-subcontents2{
+    width: 60%;
+    height: auto;
+    margin: 20px auto;
+}
+.subcontents2 .title{
     font-size: 25px;
 }
-.con2 .text{
+.subcontents2 .text{
     font-size: 20px;
     padding: 10px 0px;
 }
-.con2 a{
+.subcontents2 a{
     text-decoration-line: underline;
     font-size: 18px;
     color: #4b4b4b;
 }
-.con2 a:hover{
+.subcontents2 a:hover{
     text-decoration-line: none;
 }
 
 /*sub3*/
-.subcontents3 {
-    width: 100%;
-    height: auto;
-    margin-top: 80px;
-}
-.subcontents3 .inner-contents3 {
+.subcontents3  {
     width: 100%;
     height: auto;
 }
-.subcontents3 .inner-contents3 .con1 {
-    width: 100%;
+.subcontents3 .con1 {
     max-width: 1200px;
-    height: auto;
     margin: 50px auto;
-    box-sizing: border-box;
+    height: 400px;
 }
-.subcontents3 .inner-contents3 .con1 .inner-con1 {
-    width: 100%;
-    height: 500px;
-}
-.subcontents3 .inner-contents3 .con1 .inner-con1::after {
-    display: block;
-    content: "";
-    clear: both;
-}
-.subcontents3 .inner-contents3 .con1 .inner-con1 > ul > li {
+.subcontents3 .con1 > ul > li .sub {
     width: 25%;
     height: 500px;
     float: left;
-    box-sizing: border-box;
 }
-.subcontents3 .inner-contents3 .con1 .inner-con1 > ul > li .sub > ul > li img {
-    width: 100%;
-    display: block;
-    height: auto;
-}
-.subcontents3 .inner-contents3 .con1 .inner-con1 > ul > li .sub > ul > li {
+.subcontents3 .con1 > ul > li .sub > ul > li {
     height: auto;
     text-align: center;
     padding: 10px 0px;
+}
+.subcontents3 .con1 > ul > li .sub > ul > li img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 .sub > ul > li:nth-child(2) {
     font-size: 22px;
@@ -136,90 +93,12 @@
     margin: 0 auto;
     text-align: center;
     font-size: 18px;
-    border: 1px solid #f0efe4;
+    border: 1px solid #fcf9ee;
     border-radius: 50px;
 }
 .sub > ul > li:nth-child(4):hover{
-    background: #f0efe4;
+    background: #fcf9ee;
     transition: .5s;
-}
-
-/*sub4*/
-.subcontents4{
-    width: 100%;
-    height: auto;
-    
-}
-.subcontents4 .inner-subcontents{
-    width: 100%;
-    height: auto;
-    margin-top: 80px;
-}
-.subcontents4 .inner-subcontents .con1{
-    width: 100%;
-    height: auto;
-}
-
-/*sub5*/
-.subcontents5 {
-    width: 100%;
-    height: auto;
-}
-.subcontents5 .inner-subcontents {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-}
-.subcontents5 .inner-subcontents .con1 {
-    width: 100%;
-    max-width: 1140px;
-    height: 500px;
-    margin: 80px auto;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-}
-.subcontents5 .inner-subcontents .con1 .inner-con1 {
-    width: 1710px;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-.subcontents5 .inner-subcontents .con1 .inner-con1 > ul > li {
-    float: left;
-}
-.subcontents5 .inner-subcontents .con1 .inner-con1::after {
-    display: block;
-    content: "";
-    clear: both;
-}
-.subcontents5 .inner-subcontents .con1 .inner-con1 > ul > li .sub > ul > li img {
-    width: 100%;
-    display: block;
-    height: auto;
-}
-.subcontents5 .inner-subcontents .con1 .inner-con1 > ul > li .sub > ul > li {
-    height: auto;
-    text-align: center;
-    padding: 10px 0px;
-}
-/*arrow*/
-.subcontents5 .inner-subcontents .con1 span.arrow {
-    display: block;
-    position: absolute;
-    top: 50%;
-    margin-top: -50px;
-}
-.subcontents5 .inner-subcontents .con1 span.arrow.arrowleft {
-    left: -10px;
-}
-.subcontents5 .inner-subcontents .con1 span.arrow.arrowright {
-    right: -10px;
-}
-.subcontents5 .inner-subcontents .con1 span.arrow img {
-    width: 80%;
-    height: auto;
-    display: block;
 }
 
 /*sub6*/
@@ -229,38 +108,28 @@
     margin-bottom: 200px;
 }
 .subcontents6 .inner-subcontents6 {
-    width: 100%;
-    height: auto;
-}
-.subcontents6 .inner-subcontents6 .con1 {
     width: 80%;
-    height: 550px;;
-    box-sizing: border-box;
+    height: 550px;
     margin: 0 auto;
 }
-.subcontents6 .inner-subcontents6 .con1 ::after{
-    display: block;
-    content: "";
-    clear: both;
-}
-.subcontents6 .inner-subcontents6 .con1 .sub{
+.subcontents6 .inner-subcontents6 .sub{
     width: 48%;
     float: left;
     margin: 0 auto;
     display: block;
 }
-.subcontents6 .inner-subcontents6 .con1 .sub.sub1{
+.subcontents6 .inner-subcontents6 .sub.sub1{
     margin-right: 29px;
 }
-.subcontents6 .inner-subcontents6 .con1 .sub ul>li>img{
+.subcontents6 .inner-subcontents6 .sub ul>li>img{
     width: 100%;
     margin: 0 auto;
     display: block;
 }
-.subcontents6 .inner-subcontents6 .con1 .sub ul>li.title{
+.subcontents6 .inner-subcontents6 .sub ul>li.title{
     font-size: 24px;
 }
-.subcontents6 .inner-subcontents6 .con1 .sub ul>li.text{
+.subcontents6 .inner-subcontents6 .sub ul>li.text{
     font-size: 20px;
     padding: 10px 0px;
 }
@@ -268,96 +137,80 @@
 @media only screen and (min-width:768px) and (max-width:1023px) {
     
     /*sub1*/
-   
-    /*sub2*/
-    
-    /*sub3*/
-    
-    .subcontents3 .inner-contents3 .con1 {
-        max-width: 800px;
+    .subcontents1{
+        width: 80%;
+        height: auto;
+        margin: 50px auto;
     }
-    .subcontents3 .inner-contents3 .con1 .inner-con1 {
-        width: 100%;
+    /*sub2*/
+    .inner-subcontents2{
+        width: 80%;
+    }
+    /*sub3*/
+    .subcontents3 .con1 {
+        width: 90%;
+    }
+    .subcontents3 .con1 > ul > li .sub {
         height: 400px;
     }
-    
-    /*sub4*/
-    
-    /*sub5*/
-    .subcontents5 .inner-subcontents .con1 {
-        width: 570px;
-        height: 500px;
-        margin: 30px auto;
-    }
-    
     /*sub6*/
     
-	.subcontents6 .inner-subcontents6 .con1 {
-		height: 400px;
+	.subcontents6 .inner-subcontents6 {
+		height: 300px;
 	}
-	.subcontents6 .inner-subcontents6 .con1 .sub{
-		width: 47%;
+	.subcontents6 .inner-subcontents6 .sub{
+		width: 48%;
 	}
-	.subcontents6 .inner-subcontents6 .con1 .sub.sub1{
-		margin-right: 30px;
+	.subcontents6 .inner-subcontents6 .sub.sub1{
+		margin-right: 20px;
 	}
-	.subcontents6 .inner-subcontents6 .con1 .sub ul>li.title{
-		font-size: 22px;
-	}
-	.subcontents6 .inner-subcontents6 .con1 .sub ul>li.text{
-		font-size: 20px;
-		padding: 10px 0px;
-	}
+    .sub > ul > li:nth-child(4) {
+        width: 90%; 
+    }
 }
 
 @media only screen and (max-width:767px) {
     /*sub1*/
-    
+    .subcontents1{
+        width: 80%;
+        height: auto;
+        margin: 50px auto;
+    }
     /*sub2*/
-    
-    .con1 .img{
-    width: 90%;
-}
-    .con2{
-    width: 90%;
-}
-    
+    .inner-subcontents2{
+        width: 80%;
+    }
+    .sub > ul > li:nth-child(2) {
+        font-size: 18px;
+    }
+    .sub > ul > li:nth-child(3) {
+        font-size: 18px;
+    }
+    .sub > ul > li:nth-child(4) {
+        width: 80%; 
+        font-size: 16px;
+    }
     /*sub3*/
-
-    .subcontents3 .inner-contents3 .con1 {
-        width: 100%;
-        max-width: 300px;
-        height: 2000px;
+    .subcontents3 .con1 {
+        width: 90%;
     }
-    .subcontents3 .inner-contents3 .con1 .inner-con1 > ul > li {
-        width: 100%;
-        height: 500px;
+    .subcontents3 .con1 > ul > li .sub {
+        height: 400px;
     }
-        
-    /*sub4*/
-    
-    /*sub5*/
-    
-    .subcontents5 .inner-subcontents .con1 {
-        width: 285px;
-        height: 500px;
-        margin: 30px auto;
-    }
-    
     /*sub6*/
 
-	.subcontents6 .inner-subcontents6 .con1 {
+	.subcontents6 .inner-subcontents6 {
 		width: 80%;
-		height: 1000px;
+		height: 660px;
 	}
-	.subcontents6 .inner-subcontents6 .con1 .sub{
+	.subcontents6 .inner-subcontents6 .sub{
 		width: 100%;
 		padding-bottom: 20px;
 	}
-	.subcontents6 .inner-subcontents6 .con1 .sub ul>li.title{
+	.subcontents6 .inner-subcontents6 .sub ul>li.title{
 		font-size: 24px;
 	}
-	.subcontents6 .inner-subcontents6 .con1 .sub ul>li.text{
+	.subcontents6 .inner-subcontents6 .sub ul>li.text{
 		font-size: 20px;
 		padding: 10px 0px;
 	}  

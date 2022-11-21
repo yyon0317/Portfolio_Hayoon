@@ -1,8 +1,102 @@
+
 $(document).ready(function () {
 
-	//intro
-	$('.intro>button').click(function () {
-		$('.intro').fadeOut(500);
+
+
+	//product.json
+	$.get('product.json').then((data)=>{
+
+	//원본데이터 다른데서 많이 쓰니까 변수에 보관
+	products = data.products;
+	products2 = data.products2;
+	place = data.place;
+	place = data.place2;
+	subproducts = data.subproducts;
+	sub2products = data.sub2products;
+	sub2products2 = data.sub2products2;
+
+	//페이지로드시 json 데이터가져와서 메인페이지 내용 만들기
+	data.products.forEach((a,i) => {
+		$('.tab>.sub>ul>li').append(`
+		<div class="product" data-id="${a.id}">
+		<img src="${a.photo}" alt="img">
+		<a href="#">QUICK SHOP</a><br>
+		<div class="text" >${a.title}</div><br>
+		<div class="price"> ${a.price}</div>
+		</div>`)
+	});	
+	data.products2.forEach((a, i) => {
+		$('.tab>.sub2>ul>li').append(`
+		<div class="product" data-id="${a.id}">
+		<img src="${a.photo}" alt="img">
+		<a href="#">QUICK SHOP</a><br>
+		<div class="text" >${a.title}</div><br>
+		<div class="price"> ${a.price}</div>
+		</div>`);
+	});
+	data.place.forEach((a, i) => {
+		$('.tab2>.sub>ul>li').append(`
+		<div class="place data-id="${a.id}">
+		<img src="${a.photo}" alt="store">
+		<div class="store">${a.title}</div>
+		<div class="inner-sub">
+		<div class="adress">${a.adress}</div>
+		<div class="phone">${a.phone}</div>
+		</div>
+		</div>`);
+	});
+	data.place2.forEach((a, i) => {
+		$('.tab2>.sub2>ul>li').append(`
+		<div class="place data-id="${a.id}">
+		<img src="${a.photo}" alt="store">
+		<div class="store">${a.title}</div>
+		<div class="inner-sub">
+		<div class="adress">${a.adress}</div>
+		<div class="phone">${a.phone}</div>
+		</div>
+		</div>`);
+	});
+	data.subproducts.forEach((a, i) => {
+		$('.slideto>.con2>ul>li').append(`
+		<div class="subproduts" data-id="${a.id}">
+		<div class="img"><img src="${a.photo}" alt="gift">
+		<div class="hover"><span>ADD TO BAG</span></div>
+		</div><a href="#">QUICK SHOP</a>
+		<div class="text">${a.title}</div>
+		<div class="price">${a.price}</div>
+		</div>`);
+	});
+	data.sub2products.forEach((a, i) => {
+		$('.inner-contents3>.con1>ul>li').append(`
+		<div class="sub" data-id="${a.id}">
+		<ul>
+		<li><img src="${a.photo}" alt="Christmas Cracker"></li>
+		<li>${a.title}</li>
+		<li>${a.price}</li>
+		<li><a href="#">Quick Shop</a></li>
+		</ul>
+		</div>`);
+	});
+	data.sub2products2.forEach((a, i) => {
+		$('.inner-contents5>.con1>ul>li').append(`
+		<div class="sub" data-id="${a.id}">
+		<ul>
+		<li><img src="${a.photo}" alt="Christmas Cracker"></li>
+		<li>${a.title}</li>
+		<li>${a.price}</li>
+		<li><a href="#">Quick Shop</a></li>
+		</ul>
+		</div>`);
+	});
+
+	}); 
+
+	/*search click*/
+	$('#click').click(function(){
+	var text = document.getElementById("a").value;
+	if(text != "") {
+		alert(text);
+	}
 	});
 
 	//scroll
@@ -24,8 +118,6 @@ $(document).ready(function () {
 			$('.subgnb').css({
 				'display': 'none'
 			});
-
-
 		} else {
 			$('.header').css({
 				'position': 'static',
@@ -52,7 +144,7 @@ $(document).ready(function () {
 	//span. menu              
 	$('span.menu').click(function () {
 		$(".gnb").animate({
-			left: '0',
+			'left': '0',
 			'display': 'block'
 		});
 		$('span.menu').css({
@@ -61,8 +153,8 @@ $(document).ready(function () {
 	});
 	$('.leftxmenu').click(function () {
 		$(".gnb").animate({
-			left: '-800',
-			'display': 'none',
+			'left': '-800',
+			'display': 'none'
 		});
 		$('span.menu').css({
 			'display': 'block',
@@ -99,10 +191,8 @@ $(document).ready(function () {
 	});
 
 	//galleryimg
-
 	var galleryli = $('.gallery>ul>li');
 	var gallerybg = []
-
 	for (var i = 0; i < galleryli.length; i++) {
 		gallerybg.push('url(img/index/nav_' + i + '.png)no-repeat 50%');
 		galleryli.eq(i).css({
@@ -110,38 +200,21 @@ $(document).ready(function () {
 			'background-size': 'cover'
 		});
 	}
-
 	//autogallery
 	var idx = -1;
 	var itemsli = $('.inner-nav>.items>ul>li');
-
 	function autogallery() {
 		idx++;
 		galleryli.eq(idx).fadeIn().siblings().fadeOut();
-
 		if (idx >= galleryli.length - 1) idx = -1;
-
 		itemsli.eq(idx).addClass('on').siblings().removeClass('on');
 	}
-
 	var setin = setInterval(autogallery, 3000);
-
-	itemsli.hover(
-		function () {
-			clearInterval(setin);
-		},
-		function () {
-			setin = setInterval(autogallery, 3000);
-		}
-	);
-
+	
 	itemsli.click(function () {
 		var thisidx = $(this).index();
-
 		galleryli.eq(thisidx).fadeIn(400).siblings().fadeOut();
-
 		$(this).addClass('on').siblings().removeClass('on');
-
 		idx = thisidx;
 	});
 
@@ -149,11 +222,8 @@ $(document).ready(function () {
 	$('.con1>.items>ul>li').click(function () {
 		var thisidx = $(this).index();
 		var con2 = $('.inner-con2-1>ul>li');
-
 		con2.eq(thisidx).fadeIn().siblings().fadeOut();
-
 		$(this).addClass('on1').siblings().removeClass('on1');
-
 		idx = thisidx;
 	});
 
@@ -181,9 +251,6 @@ $(document).ready(function () {
 	});
 
 	//contents5
-	$('span.lan').click(function () {
-		$('.lansub').slideToggle(50);
-	});
 	$('span.arrow.arrowleft img').click(function () {
 		var bannerli = $('.inner-con3-1 > ul > li');
 		$('.inner-con3-1 > ul ').append(bannerli.eq(0));
@@ -215,16 +282,4 @@ $(document).ready(function () {
 
 	});
 
-	/*sub2*/
-	$('.con1>span.arrow.arrowleft').click(function () {
-		var conli = $('.inner-con1.n1>ul>li');
-		$('.inner-con1.n1>ul').append(conli.eq(0));
-	});
-	$('.con1>span.arrow.arrowright').click(function () {
-		var conli = $('.inner-con1.n1>ul>li');
-		var lastnum = conli.length - 1;
-		$('.inner-con1.n1>ul').prepend(conli.eq(lastnum));
-
-	});
-
-});
+})

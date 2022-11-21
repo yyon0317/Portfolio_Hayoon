@@ -13,7 +13,6 @@
     background: url(../../img/join/joinbg.jpg) no-repeat 50% 50%;
     background-size: cover;
     background-attachment: fixed;
-
 }
 /*contents 시작*/
 .contents .inner-con {
@@ -35,16 +34,10 @@
 .contents .inner-con .join .join-title {
     width: 100%;
     height: auto;
-    box-sizing: border-box;
     padding: 20px 0;
-}
-.contents .inner-con .join .join-title h1.maintitle {
     text-align: center;
-    box-sizing: border-box;
-
 }
 .contents .inner-con .join .join-title p.subtitle {
-    text-align: center;
     font-size: 13px;
     line-height: 50px;
 }
@@ -161,7 +154,6 @@
     .contents .inner-con .join .join-form ul > li input[type=phone2] {
         width: 30%;
         color: #777;
-        float: left;
         margin: 0 1px;
     }
     .contents .inner-con .join .join-form span.private {
@@ -184,9 +176,6 @@
     .contents .inner-con .join {
         padding: 10px 10px;
     }
-    .contents .inner-con .join .join-title {
-        padding: 0px 0;
-    }
     .contents .inner-con .join .join-title p.subtitle {
         font-size: 10px;
         line-height: 13px;
@@ -199,10 +188,6 @@
         width: 100%;
         height: 30px;
         font-size: 10px;
-    }
-    .contents .inner-con .join .join-form ul > li input:focus {
-        border: 1px solid #eeed;
-        background: #fff;
     }
     .contents .inner-con .join .join-form ul > li input[type=phone] {
         width: 34.5%;
