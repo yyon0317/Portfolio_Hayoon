@@ -23,14 +23,11 @@ jQuery(document).ready(function () {
 	}
 
 	
-	//menu 자바스크립트
+	//menu 
+	
 	document.querySelector('.book1').addEventListener('click',function(){
 		document.querySelector('.inslide').classList.toggle('on');
 	});
-	//menu 제이쿼리
-	// $('.book1').on('click', function () {
-	// 	$(".inslide").toggleClass('on');
-	// })
 
 	// When the user scrolls the page, execute myFunction 
 	window.onscroll = function () {

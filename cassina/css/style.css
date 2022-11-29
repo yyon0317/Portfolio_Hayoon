@@ -229,7 +229,6 @@ main .visual .items>ul>li:hover{
     opacity: 0.5;
     cursor: pointer;
 }
-
 .bg4{
     position: absolute;
     top: -8000px;
@@ -562,7 +561,7 @@ main .visual .items>ul>li:hover{
 .contents5 >.in-contents5 >.con1>ul>.contents>a::before{
 	content: '';
 	display: block;
-	width: 100%;
+	width: 90%;
 	height: 3px;
 	background: #8a8a8a;
 	position: relative;
@@ -573,7 +572,7 @@ main .visual .items>ul>li:hover{
 	z-index: 0;
 	transition: all 0.5s; 
 }
-.contents5 >.in-contents5 >.con>ul>.contents>a:hover::before{width:80%;}
+.contents5 >.in-contents5 >.con>ul>.contents>a:hover::before{width:100%;}
 .contents5 >.in-contents5 >.con>ul>.contentsimg{
     margin-left: 30px;
 }
@@ -610,7 +609,7 @@ main .visual .items>ul>li:hover{
 .contents5 >.in-contents5 >.con2>ul>.contents>a::before{
 	content: '';
 	display: block;
-	width: 100%;
+	width: 90%;
 	height: 3px;
 	background: #8a8a8a;
 	position: relative;

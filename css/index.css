@@ -379,6 +379,7 @@ button{border: 0; background: none;}
 	width: 100%;
 	height: 850px;
 	cursor: pointer;
+	position: absolute;
 }
 .swiper-slide {
 	text-align: center;
@@ -422,6 +423,19 @@ button{border: 0; background: none;}
 .swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{
 	display : inline-block !important;
 	margin: 6px 2px !important;
+}
+.swiper-pagination-bullet-active{
+	--swiper-theme-color : #EA543C !important;
+}
+.swiper-button-next{
+	position:absolute !important;
+	right: 1000px!important;
+	color: #EA543C !important;
+}
+.swiper-button-prev{
+	position:absolute !important;
+	left: 1000px!important;
+	color: #EA543C !important;
 }
 .swiper-slide .con{
 	width: 133%;/*133*/

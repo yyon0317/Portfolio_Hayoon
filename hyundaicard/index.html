@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현대카드</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="logo"><a href="index.html"><img src="img/logo_hyundaicard_scr.svg" alt="logo"></a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">카드</a></li>
+                    <li><a href="#">혜택</a></li>
+                    <li><a href="#">금융</a></li>
+                    <li><a href="#">컬처</a></li>
+                    <li><a href="#">고객지원</a></li>
+                </ul>
+            </div>
+            <div class="boxetc">
+                <div class="menuetc">
+                    <ul>
+                        <li><a href="#">개인사업자</a></li>
+                        <li><a href="#">법인</a></li>
+                        <li class="bar"><a href="#">가맹점</a></li>
+                        <li><a href="#">소비자보호 포털</a></li>
+                        <li><a href="#">상품공시실</a></li>
+                    </ul>
+                </div>
+                <div class="input_cell">
+                    <a href="#" type='button' value='CLICK' id="click"><img src="img/ico_searchB.png" alt="ico_search"></a>
+                    <input type='text' id='search' placeholder='카드,메뉴,혜택을 검색해 보세요' />
+                </div>  
+            </div>
+        </header>
+         <div class="submenu">
+            <div class="in_submenu">
+                <div class="leftmenu">
+                    <ul>
+                        <li><a href="#"><h6>이용내역</h6></a>
+                            <ul>
+                                <li><a href="#">이용대금명세서</a></li>
+                                <li><a href="#">카드 이용내역(매출전표조회)</a></li>
+                                <li><a href="#">카드이용알림서비스</a></li>
+                                <li><a href="#">금융이용내역</a></li>
+                                <li><a href="#">유료상품 가입정보</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#"><h6>이용대금 결제</h6></a>
+                            <ul>
+                                <li><a href="#">즉시결제</a></li>
+                                <li><a href="#">분할납부</a></li>
+                                <li><a href="#">결제연기</a></li>
+                            </ul></li>
+                        <li><a href="#"><h6>내 카드 관리</h6></a>
+                            <ul>
+                                <li><a href="#">내 카드 목록</a></li>
+                                <li><a href="#">카드비밀번호 설정 변경</a></li>
+                                <li><a href="#">결제연기</a></li>
+                            </ul></li>
+                        <li><a href="#"><h6>케어.안심 서비스</h6></a>
+                            <ul>
+                                <li><a href="#">해외이용제한/해제서비스</a></li>
+                                <li><a href="#">해외원화결제차단서비스</a></li>
+                                <li><a href="#">이용내역안내메일서비스</a></li>
+                                <li><a href="#">카드본인확인서비스</a></li>
+                                <li><a href="#">케어서비스</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="rightmenu">
+                    <h6>자주찾는메뉴</h6>
+                    <P>로그인하면 자주 찾는 메뉴를<br>확인할 수 있습니다.</P>
+                    <div class="loginbt"><a href="#">로그인</a></div>  
+                </div>
+            </div>   
+        </div>
+        <div id="topBanner" role="banner">
+            <div class="desc">넥슨 현대카드,던전앤파이터 전용 플레이트 공개 기념 이벤트</div>
+            <button type="button" class="btnClose">X</button>
+        </div>
+        <div class="content">
+            <section class="left_con">
+                <div class="visualbanner">
+                    <div class="swiper list1">
+                        <div class="swiper-wrapper"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                        <div class="btn_pause"></div>
+                        <div class="swiper-pagination"></div>
+                </div>
+                <div class="card_plate">
+                    <div class="card_info">
+                        <h2>Hyundai<br>Originals</h2>
+                        <p class="card_desc">
+                            <span>현대카드의 오리지널리티를 담은<br>진정한 현대카드</span>
+                            <a href="#">전체보기<img src="img/ico_arrowB_forward_blue.png" alt="ico_arrowB"></a>
+                        </p>
+                        <div class="tag_list">
+                            <li><a href="#">#프리미엄</a></li>
+                            <li><a href="#">#쓸 때마다 할인</a></li>
+                            <li><a href="#">#어디서나 포인트적립</a></li>
+                            <li><a href="#">#3F 시스템 혜택</a></li>
+                        </div>
+                    </div>
+                    <ul class="card_list">
+                        <li><a href="#"><img src="img/card_TPE3_h.png" alt="card_TPE3_h"><span>the Purple osee</span></a></li>
+                        <li><a href="#"><img src="img/card_TRE5_h.png" alt="card_TRE5_h"><span>the Red Edition5</span></a></li>
+                        <li><a href="#"><img src="img/card_TGE2_h.png" alt="card_TGE2_h"><span>the Green Edition2</span></a></li>
+                        <li><a href="#"><img src="img/card_TPI_h.png" alt="card_TPI_h"><span>the Pink</span></a></li>
+                        <li><a href="#"><img src="img/card_MBT_h.png" alt="card_MBT_h"><span>M BOOTS</span></a></li>
+                        <li><a href="#"><img src="img/card_XE3_h.png" alt="card_XE3_h"><span>X BOOTS</span></a></li>
+                        <li><a href="#"><img src="img/card_ZF_h.png" alt="card_ZF_h"><span>Z family</span></a></li>
+                        <li><a href="#"><img src="img/card_ZROE2_h.png" alt="card_ZROE2_h"><span>ZERO Edition2</span></a></li>
+                    </ul>
+                </div>   
+                <div class="card_plate">
+                    <div class="card_info">
+                        <h2>Champion<br>Brands</h2>
+                        <p class="card_desc">
+                            <span>최고의 브랜드와 콜라보한<br>또 하나의 현대카드</span>
+                            <a href="#">전체보기<img src="img/ico_arrowB_forward_blue.png" alt=""></a>
+                        </p>
+                        <div class="tag_list">
+                            <li><a href="#">#프리미엄</a></li>
+                            <li><a href="#">#쓸 때마다 할인</a></li>
+                            <li><a href="#">#어디서나 포인트적립</a></li>
+                            <li><a href="#">#3F 시스템 혜택</a></li>
+                        </div>
+                    </div>
+                    <ul class="card_list">
+                        <li><a href="#"><img src="img/card_SGE2_h.png" alt="card_SGE2"><span>SSG.COM카드 Edition2</span></a></li>
+                        <li><a href="#"><img src="img/card_NXHC_h.png" alt="card_NXHC"><span>넥슨 현대카드</span></a></li>
+                        <li><a href="#"><img src="img/card_GCE2_h.png" alt="card_GCE2"><span>에너지플러스카드 Edition2</span></a></li>
+                        <li><a href="#"><img src="img/card_NVHC_h.png" alt="card_NVHC"><span>네이버 현대카드</span></a></li>
+                        <li><a href="#"><img src="img/card_KALT3_h.png" alt="card_KALT3"><span>대한항공카드 150</span></a></li>
+                        <li><a href="#"><img src="img/card_SBHC_h.png" alt="card_SBHC"><span>스타벅스 현대카드</span></a></li>
+                        <li><a href="#"><img src="img/card_ESPE2_h.png" alt="card_ESPE2"><span>SmileCard Edition2</span></a></li>
+                        <li><a href="#"><img src="img/card_CSTC_h.png" alt="card_CSTC"><span>코스트코 리워드 현대카드</span></a></li>
+                    </ul>
+                </div>  
+                <div class="sec_maincontent">
+                    <ul class="grid_list">
+                        <li><a href="#"><img src="img/PCMOCardPlate1.png" alt="PCMOCardPlate1"><p>넥슨 현대카드<br>
+                            던전앤파이터 전용 플레이트 'Danjin' 공개 기념 이벤트</p></a></li>
+                        <li><a href="#"><img src="img/PCMOCardPlate.jpg" alt="/PCMOCardPlate"><p>현대카드 호텔위크 06<br>
+                            프리미엄 호텔 페스티벌</p></a></li>
+                        <li><a href="#"><img src="img/PCMOillust.jpg" alt="PCMOillust"><p>현대자동차ㆍ기아 전용카드<br>
+                            신차 구매 혜택</p></a></li>
+                        <li><a href="#"><img src="img/PCdtag_education.png" alt="PCdtag_education"><p>대학·대학원 등록금 납부 시<br>
+                            무이자 할부 · 부분 무이자 할부</p></a></li>
+                        <li><a href="#"><img src="img/evnt_thumb_casper.png" alt="evnt_thumb_casper"><p>CASPER 전용카드만의<br>
+                            특별한 혜택</p></a></li>
+                        <li><a href="#"><img src="img/evnt_thumb_rent.png" alt="evnt_thumb_rent"><p>월세서비스 신규 신청하고<br>
+                            캐시백 혜택 받기</p></a></li>
+                        <li><a href="#"><img src="img/PCMOphoto.jpg" alt="PCMOphoto"><p>대한항공카드 이벤트<br>
+                            항공권 할인 + 마일리지 적립</p></a></li>
+                        <li><a href="#"><img src="img/PCMOIllsut.jpg" alt="PCMOIllsut"><p>모바일 쿠폰으로<br>
+                            더 편리해진 M포인트 사용</p></a></li>
+                        <li><a href="#"><img src="img/PCMOIllust1.png" alt="PCMOIllust1"><p>네이버 현대카드 이용하고<br>
+                            1만원 캐시백 받기</p></a></li>
+                        <li><a href="#"><img src="img/PCMOCardPlate2.jpg" alt="PCMOCardPlate2"><p>현대홈쇼핑 현대카드<br>
+                            이벤트 혜택 안내</p></a></li>
+                        <li><a href="#"><img src="img/PCMOCardPlate3.jpg" alt="PCMOCardPlate3"><p>네이버 현대카드 1주년 기념<br>
+                            플레이트 안내</p></a></li>
+                    </ul>
+                </div> 
+            </section>
+            <section class="right_con">
+                <div class="right_content">
+                    <div class="sec_main_login">
+                        <div class="sec_right_head">
+                            <h4>로그인</h4>
+                            <a href="#">다른 로그인 방법</a>
+                        </div>
+                        <ul class="login_tab">
+                            <li class="current" data-tab="tab-1"><a href="#">간편번호</a></li>
+                            <li data-tab="tab-2"><a href="#">현대카드앱</a></li>
+                        </ul>
+                        <div class="login_tab_content" id="tab-2">
+                            <div class="login_method">
+                                <div class="pin_area">
+                                    <p>현대카드 홈페이지 간편번호<br/>6자리를 설정해 주세요</p>
+                                    <div class="pin_number">
+                                        <!-- <input type="pin" type="password" maxlength="6"> -->
+                                    </div>
+                                    <div class="bottom_login">
+                                        <a href="#">간편번호 등록</a>
+                                    </div>
+                                    <div class="pin_join_btn">
+                                        <a href="#">회원가입</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="login_tab_content current" id="tab-1"> 
+                            <div class="login_method">
+                                <div class="app_area">
+                                    <p>현대카드 앱 실행 후 '앱카드 메뉴'에서<br/>QR코드 스캔 또는 숫자코드 입력을<br/>선택해 주세요</p>
+                                    <p class="time" id="demo"></p>
+                                    <div class="qr_code">
+                                        <span class="qr"><img src="img/QRCODE.png" alt="QRCODE"></span>
+                                        <span class="or">또는</span>
+                                        <span class="code">1127695</span>
+                                    </div>
+                                    <div class="login_bottom">
+                                        <a href="#" class="app_down">앱다운로드</a>
+                                        <a href="#">회원가입</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sec_menucms">
+                        <div class="quick_menu">
+                            <a href="#" class="qm1"><span>고객지원</span></a>
+                            <a href="#" class="qm2"><span>상담·문의</span></a>
+                            <a href="#" class="qm3"><span>도난·분실</span></a>
+                        </div>
+                    </div>
+                    <div class="sec_info">
+                        <div class="sec_info_head">
+                            <a href="#"><h4>금융</h4></a>
+                        </div>
+                        <ul class="sec_info_list">
+                            <li><a href="#">
+                                <h5>장기카드대출(카드론)</h5>
+                                <p>목돈이 필요할 때</p>
+                            </a></li>
+                            <li><a href="#">
+                                <h5>단기카드대출(현금서비스)</h5>
+                                <p>일상에서 현금이 필요할 때</p>
+                            </a></li>
+                            <li><a href="#">
+                                <h5>일부결제금액이월약정(리볼빙)</h5>
+                                <p>카드대금이 부담이될 때</p>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div class="sec_notice">
+                           <a href="#"><h4>뉴스·공지사항</h4></a>
+                        <ul class="notice_list">
+                            <li><a href="#">현대카드 휴대폰 메시지 표준약관 개정 안내</a></li>
+                            <li><a href="#">플래티넘 서비스 주말 무료 주차 대상점 변경 안내</a></li>
+                            <li><a href="#">현대카드 개인회원 약관 개정 안내</a></li>
+                            <li><a href="#">현대카드 PRIVIA 여행 항공권 할인 프로모션 안내(2022년 10월 기준)</a></li>
+                            <li><a href="#">단기카드대출(현금서비스) 및 일부결제금액이월약정(리볼빙) 이자율 변경 안내</a></li>                                           
+                        </ul>
+                    </div>
+                    <div class="appstore"></div>
+                </div>
+                <footer>
+                    <div class="footer_warning">
+                        <a href="#"><h4 class="title">소비자 경보</h4></a>
+                        <p class="desc">온라인 쇼핑몰 오시싸 배송 및 환불<br>지연 관련 주의하세요!</p>
+                    </div>
+                    <div class="footer_link">
+                        <a href="#">개인</a>
+                        <a href="#">개인사업자</a>
+                        <a href="#">법인</a>
+                        <a href="#">가맹점</a>
+                    </div>
+                    <div class="footer_customer">
+                        <ul>
+                            <li><strong>고객센터</strong><span>1577-6000</span></li>
+                            <li><strong>카드신청</strong><span>1577-0100</span></li>
+                            <li><strong>금융신청</strong><span>1577-6100</span></li>
+                            <li><strong>도난분실신고</strong><span>1577-6200</span></li>
+                            <li><strong>해외</strong><span>82-2-3015-9000</span></li>
+                        </ul>
+                    </div>
+                    <div class="footer_corp">
+                        <h6>회사소개</h6>
+                        <ul class="list">
+                            <li><a href="#">회사소개(한글</a>·<a href="#">ENG)</a></li>
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">영업점 안내</a></li>
+                            <li><a href="#">업무위탁현황</a></li>
+                            <li><a href="#"><strong>개인정보 처리방침</strong></a></li>
+                            <li><a href="#">인재모집</a></li>
+                            <li><a href="#">고객권리안내</a></li>
+                            <li><a href="#">사이트맵</a></li>
+                            <li><a href="#">이용약관</a></li>
+                        </ul>
+                        <p><a>현대카드 SNS·패밀리·그룹사</a></p>
+                    </div>
+                    <div class="footer_address">
+                        <address>서울시 영등포구 의사당대로 3 현대카드빌딩 1관</address>
+                        <p>사업자 등록번호 213-86-15419 <br>© Hyundai Card Co., Ltd.</p>
+                    </div>
+                    <div class="footer_mark">
+                        <a href="#">
+                            <img src="img/logo_com_img_wa.png" alt="WA인증마크"/>
+                        </a>
+                        <a href="#">
+                            <img src="img/logo_com_img_bsi.png" alt="품질경영시스템 인증 마크">
+                        </a>
+                    </div>
+                </footer>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+
+
