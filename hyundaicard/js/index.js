@@ -84,6 +84,7 @@ $(document).ready(function () {
         },
     
         });
+
         var sw = 0;
     $('.btn_pause').click(function(){
         if(sw==0){
