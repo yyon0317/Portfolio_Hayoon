@@ -237,6 +237,7 @@
 
 	<script>
 		//아이디 체트 
+		//if(value == "" || value == null || value.length <= 4)else()문을 사용해서 아이디체크  
 		var idcheckok = document.querySelector('#idcheckok');
 		idcheckok.addEventListener('click', idcheckokfunc);
 
@@ -250,20 +251,20 @@
 			}
 			if (userid.value != "yhy8283@naver.com") {
 				alert("사용할 수 있는 아이디")
-				checkid.value = "okchecked"; //아이디가 M111이면
+				checkid.value = "okchecked"; 
 			} else {
 				alert("사용할 수 없는 아이디")
 				checkid.value = "nochecked";
 			}
 		}
 		//비밀번호
+		//if(userpw.value != userpw2.value || userpw2.value == "" || userpw2.value == null)else()문을 사용해서 비밀번호 2단계체크
 		var userpw = document.getElementsByName('pw1')[0];
 		var userpw2 = document.getElementsByName('pw2')[0];
 		userpw2.addEventListener('keyup', userpw2up);
 		var pwcheck = document.querySelector('span.pwcheck')
 
 		function userpw2up() {
-
 			if (userpw.value != userpw2.value || userpw2.value == "" || userpw2.value == null) {
 				pwcheck.textContent = "비밀번호가 틀립니다";
 				pwcheck.style.color = "#f00";
@@ -273,6 +274,7 @@
 			}
 		}
 		//회원가입 실행
+		//if (value == "" || value == null || value.length <= 2) else()문을 사용해서 입력확인 후 submit()제출
 		let joinok = document.querySelector('#joinok');
 		joinok.addEventListener('click', joinokfunc);
 

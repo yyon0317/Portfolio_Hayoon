@@ -21,7 +21,7 @@
     padding-top: 150px;
     margin-bottom: 150px;
 }
-.contents .inner-con .join {
+.join {
     width: 100%;
     max-width: 600px;
     height: auto;
@@ -31,31 +31,31 @@
     box-shadow: 1px 1px 10px #fff5;
     background: #fff;
 }
-.contents .inner-con .join .join-title {
+.join-title {
     width: 100%;
     height: auto;
     padding: 20px 0;
     text-align: center;
 }
-.contents .inner-con .join .join-title p.subtitle {
+.subtitle {
     font-size: 13px;
     line-height: 50px;
 }
-.contents .inner-con .join .join-form {
+.join-form {
     width: 100%;
     height: auto;
     box-sizing: border-box;
 }
-.contents .inner-con .join .join-form ul > li::after {
+.join-form ul > li::after {
     content: "";
     display: block;
     clear: both;
 }
-.contents .inner-con .join .join-form ul > li {
+.join-form ul > li {
     box-sizing: border-box;
     padding: 12px 40px;
 }
-.contents .inner-con .join .join-form ul > li input {
+.join-form ul > li input {
     width: 100%;
     height: 40px;
     display: block;
@@ -65,42 +65,43 @@
     background: #eeed;
     outline: none;
 }
-.contents .inner-con .join .join-form ul > li input:focus {
+.join .join-form ul > li input:focus {
     border: 1px solid #eeed;
     background: #fff;
 }
-.contents .inner-con .join .join-form ul > li input[type=email] {
+.join .join-form ul > li input[type=email] {
     width: 70%;
     cursor: pointer;
     float: left;
+
 }
-.contents .inner-con .join .join-form ul > li input[type=button] {
+.join-form ul > li input[type=button] {
     width: 29.5%;
     color: #777;
     cursor: pointer;
     float: right;
     text-indent: 0px;
 }
-.contents .inner-con .join .join-form ul > li input[type=phone] {
+.join-form ul > li input[type=phone] {
     width: 34.5%;
     color: #777;
     float: left;
 }
-.contents .inner-con .join .join-form ul > li input[type=phone2] {
+.join-form ul > li input[type=phone2] {
     width: 30%;
     color: #777;
     float: left;
     margin: 0 2.3px;
 }
-.contents .inner-con .join .join-form ul > li input[type=submit] {
+.join-form ul > li input[type=submit] {
     background: #f0efe4;
     color: #fff;
     cursor: pointer;
 }
-.contents .inner-con .join .join-form ul > li input[type=submit]:hover {
+.join-form ul > li input[type=submit]:hover {
     color: #000;
 }
-.contents .inner-con .join .join-form span.private {
+.private {
     display: block;
     width: 200px;
     line-height: 30px;
@@ -123,40 +124,39 @@
         padding-top: 150px;
         margin-bottom: 0px;
     }
-    .contents .inner-con .join {
+    .join {
         padding: 10px 10px;
     }
-    .contents .inner-con .join .join-title {
+    .join-title {
         padding: 0px 0;
     }
-    .contents .inner-con .join .join-title p.subtitle {
+    .subtitle {
         font-size: 10px;
         line-height: 13px;
     }
-    .contents .inner-con .join .join-form ul > li {
+    .join-form ul > li {
         box-sizing: border-box;
         padding: 9px 70px;
     }
-    .contents .inner-con .join .join-form ul > li input {
-        width: 100%;
+    .join-form ul > li input {
         height: 30px;
         font-size: 10px;
-    }
-    .contents .inner-con .join .join-form ul > li input:focus {
+    } 
+    .join-form ul > li input:focus {
         border: 1px solid #eeed;
         background: #fff;
     }
-    .contents .inner-con .join .join-form ul > li input[type=phone] {
+    .join-form ul > li input[type=phone] {
         width: 34.5%;
         color: #777;
         float: left;
     }
-    .contents .inner-con .join .join-form ul > li input[type=phone2] {
+    .join-form ul > li input[type=phone2] {
         width: 30%;
         color: #777;
         margin: 0 1px;
     }
-    .contents .inner-con .join .join-form span.private {
+    .private {
         font-size: 5px;
     }
 }
@@ -173,34 +173,32 @@
         padding-top: 150px;
         margin-bottom: 0px;
     }
-    .contents .inner-con .join {
+    .join {
         padding: 10px 10px;
     }
-    .contents .inner-con .join .join-title p.subtitle {
+    .subtitle {
         font-size: 10px;
-        line-height: 13px;
     }
-    .contents .inner-con .join .join-form ul > li {
+    .join-form ul > li {
         box-sizing: border-box;
         padding: 7px 0px;
     }
     .contents .inner-con .join .join-form ul > li input {
-        width: 100%;
         height: 30px;
         font-size: 10px;
     }
-    .contents .inner-con .join .join-form ul > li input[type=phone] {
+    .join-form ul > li input[type=phone] {
         width: 34.5%;
         color: #777;
         float: left;
     }
-    .contents .inner-con .join .join-form ul > li input[type=phone2] {
+    .join-form ul > li input[type=phone2] {
         width: 30%;
         color: #777;
         float: left;
         margin: 0 1px;
     }
-    .contents .inner-con .join .join-form span.private {
+    .join-form span.private {
         font-size: 5px;
     }
 }

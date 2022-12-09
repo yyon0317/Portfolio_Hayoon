@@ -1,12 +1,11 @@
 
 $(document).ready(function () {
 
-
-
 	//product.json
+	//상품정렬구현에는 array 배열 리스트 형식을 사용한 product.json 데이터가 담긴 파일을 get()가져와서
+	//forEach/append()을 사용해  기존태그에 안에 html형식을 추가
 	$.get('product.json').then((data)=>{
 
-	//원본데이터 다른데서 많이 쓰니까 변수에 보관
 	products = data.products;
 	products2 = data.products2;
 	place = data.place;
@@ -15,7 +14,7 @@ $(document).ready(function () {
 	sub2products = data.sub2products;
 	sub2products2 = data.sub2products2;
 
-	//페이지로드시 json 데이터가져와서 메인페이지 내용 만들기
+	//페이지로드시 json 데이터가져오기
 	data.products.forEach((a,i) => {
 		$('.tab>.sub>ul>li').append(`
 		<div class="product" data-id="${a.id}">
@@ -90,8 +89,9 @@ $(document).ready(function () {
 	});
 
 	}); 
-
+	
 	/*search click*/
+	//검색입력정보 value로 가져와서 alert 띄어줌
 	$('#click').click(function(){
 	var text = document.getElementById("a").value;
 	if(text != "") {
@@ -100,9 +100,11 @@ $(document).ready(function () {
 	});
 
 	//scroll
+	//상단 메뉴에는 scroll/scrolltop()을 사용해서 css.position(fixed)로 스크롤시 상단고정
+	//contents2
+	//scroll/scrolltop()을 사용해서 animate()동적효과 구현
 	$(window).scroll(function () {
 		if ($(window).scrollTop() > 50) {
-
 			$('.header').css({
 				'position': 'fixed',
 				'left': '0',
@@ -131,16 +133,21 @@ $(document).ready(function () {
 				'display': 'block'
 			});
 		}
+		if ($(window).scrollTop() > 1000) {
+			$(".con2-1").animate({
+			 	left: '10px'
+			});
+		}
 	});
 
 	//submenu
+	//jQuery Effect Methods animate()/mouseleave()/mousedown()/hover()로 PC/모바일에서의 메뉴/아이콘에 동적효과 구현
 	$('.gnb-center>ul>li>a').mouseover(function () {
 		$('.submenu').slideDown(100);
 	});
 	$('.submenu').mouseleave(function () {
 		$('.submenu').slideUp(0);
 	});
-
 	//span. menu              
 	$('span.menu').click(function () {
 		$(".gnb").animate({
@@ -160,7 +167,6 @@ $(document).ready(function () {
 			'display': 'block',
 		});
 	});
-
 	//iconimg
 	$('img.map').hover(function () {
 		$('span.sub.map').css({
@@ -191,6 +197,7 @@ $(document).ready(function () {
 	});
 
 	//galleryimg
+	//메인 슬라이드 이미지 for반복문/증감연산자++/push를 사용해서 이미지 추가
 	var galleryli = $('.gallery>ul>li');
 	var gallerybg = []
 	for (var i = 0; i < galleryli.length; i++) {
@@ -201,6 +208,8 @@ $(document).ready(function () {
 		});
 	}
 	//autogallery
+	//function()함수/if()조건문/setInterval()반복 실행으로 autogallery구현
+	//jQuery Effect Methods fadeIn()/siblings()/fadeOut()/addClass()/siblings()/removeClass()를 사용해서 클릭시 보이고 그외 숨기기
 	var idx = -1;
 	var itemsli = $('.inner-nav>.items>ul>li');
 	function autogallery() {
@@ -210,7 +219,6 @@ $(document).ready(function () {
 		itemsli.eq(idx).addClass('on').siblings().removeClass('on');
 	}
 	var setin = setInterval(autogallery, 3000);
-	
 	itemsli.click(function () {
 		var thisidx = $(this).index();
 		galleryli.eq(thisidx).fadeIn(400).siblings().fadeOut();
@@ -219,6 +227,7 @@ $(document).ready(function () {
 	});
 
 	//contents1 
+	//jQuery Effect Methods fadeIn()/siblings()/fadeOut()/addClass()/siblings()/removeClass()를 사용해서 클릭시 보이고 그외 숨기기
 	$('.con1>.items>ul>li').click(function () {
 		var thisidx = $(this).index();
 		var con2 = $('.inner-con2-1>ul>li');
@@ -226,31 +235,17 @@ $(document).ready(function () {
 		$(this).addClass('on1').siblings().removeClass('on1');
 		idx = thisidx;
 	});
-
-	//contents2
-	$(window).scroll(function () {
-		if ($(window).scrollTop() > 1000) {
-			$(".con2-1").animate({
-				left: '10px'
-			});
-		}
-	});
-
+	
 	//contents3
+	//jQuery Effect Methods show()/hide() POPUP동적효과 구현
 	$('.inner-con2>ul>li').hover(function () {
 		$('.popup').show();
 	}, function () {
 		$('.popup').hide();
 	});
 
-	//contents4
-	$(window).scroll(function () {
-		if ($(window).scrollTop() > 2000) {
-			$('.contents4 .inner-con4 > .con').fadeIn(3000);
-		}
-	});
-
 	//contents5
+	//jQuery Effect Methods append()/prepend()/length 를 사용해서 슬라이드형식 구현
 	$('span.arrow.arrowleft img').click(function () {
 		var bannerli = $('.inner-con3-1 > ul > li');
 		$('.inner-con3-1 > ul ').append(bannerli.eq(0));
@@ -262,6 +257,7 @@ $(document).ready(function () {
 	});
 
 	/*sub1*/
+	//jQuery Effect Methods slidetoggle사용해서 down/up슬라이드 웹콘텐츠 구현
 	$(".inner-subcontents2>.con1").click(function () {
 		$(".inner-subcontents2>.con2").slideToggle("slow");
 	});
@@ -271,6 +267,7 @@ $(document).ready(function () {
 	$(".inner-subcontents4>.con1").click(function () {
 		$(".inner-subcontents4>.con2").slideToggle("slow");
 	});
+	//jQuery Effect Methods append()/prepend()/length 를 사용해서 슬라이드형식 구현
 	$('.con2>span.arrow.arrowleft').click(function () {
 		var reviewli = $('.review-con>ul>li');
 		$('.review-con>ul').append(reviewli.eq(0));

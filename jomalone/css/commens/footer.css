@@ -13,11 +13,11 @@
     box-sizing: border-box;
     color: #fff;
 }
-.footer .inner-fcon>ul>li:nth-child(1) ul>li.logo {
+.footer .logo {
     width: 10%;
     height: auto;
 }
-.footer .inner-fcon>ul>li:nth-child(1) ul>li.search #a{
+.footer .search #a{
     background: #0006;
     color: #fff;
     width: 150px;
@@ -25,7 +25,7 @@
     text-indent: 10px;
     border: 0px;
 }
-.footer .inner-fcon>ul>li:nth-child(1) ul>li.search #click{
+.footer #click{
     background: #0006;
     color: #fff;
     width: 80px;
@@ -47,7 +47,7 @@
     font-size: 19px;
     padding-bottom: 10px;
 }
-.footer .inner-fcon>ul .ficon{
+.ficon{
     width: 150px;
     margin: 0 auto;
 }
@@ -72,7 +72,7 @@
     width: 90%;
     height: 350px;
 }
-.footer .inner-fcon>ul>li:nth-child(1) ul>li.logo img {
+.footer .logo img {
     width: 1100%;
     height: auto;
 }

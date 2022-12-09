@@ -7,11 +7,11 @@
 .submenu {
     top: 145px !important;
 }
-.subcontents1 .inner-subcontents1 .con1{
+.subcontents1 .con1{
     width: 100%;
     height: auto;
 }
-.subcontents1 .inner-subcontents1 .con2{
+.subcontents1 .con2{
     width:70%;
     height: auto;
     margin: 0 auto ;
@@ -28,7 +28,7 @@
     padding: 10px;
     font-size: 20px;
 }
-.subcontents1 .inner-subcontents1 .con2 .title{
+.subcontents1 .con2 .title{
     font-size: 32px;
 }
 
@@ -83,17 +83,17 @@
     height: auto;
     display: block;
 }
-.subcontents3 .inner-subcontents3 >.con1 .text{
+.subcontents3 .con1 .text{
     float: left; 
 }
-.subcontents3 .inner-subcontents3 >.con1 .imgbg{
+.subcontents3 .con1 .imgbg{
     float: right;
 }
 /*con2*/
-.subcontents3 .inner-subcontents3 .con2{
+.subcontents3 .con2{
     display: none;
 }
-.subcontents4 .inner-subcontents4 .con2{
+.subcontents4 .con2{
     display: none;
 }
 .con2{
@@ -177,7 +177,7 @@
     height: auto;
     margin: 90px 0px;
 }
-.subcontents6 .inner-contents6 video{
+video{
     max-width: 1000px;
     height: auto;
     display: block;
@@ -196,58 +196,57 @@
     height: auto;
     margin: 0 auto;
 }
-.subcontents5 .inner-subcontents5 .con1 .title{
+.subcontents5 .con1 .title{
     text-align: center;
     font-size: 30px;
 }
-.subcontents5 .inner-subcontents5 .con1 .subtitle{
+.subcontents5 .con1 .subtitle{
     text-align: center;
     font-size: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.subcontents5 .inner-subcontents5 .con2 {
+.subcontents5 .con2 {
     width: 100%;
     position: relative;
 }
-.subcontents5 .inner-subcontents5 .con2 .inner-con2 {
+.subcontents5 .con2 .inner-con2 {
     max-width: 1200px;
     margin: 0 auto;
     height: 400px;
     position: relative;
     overflow: hidden;
 }
-.subcontents5 .inner-subcontents5 .con2 .inner-con2 .review{
+.review{
     width: 33.3333%;
     height: 400px;
     position: absolute;  
 }
-.subcontents5 .inner-subcontents5 .con2 .inner-con2 .review .review-con {
+.review-con {
     width: 600%;
     position: absolute;
 }
-.subcontents5 .inner-subcontents5 .con2 .inner-con2 .review .review-con > ul > li {
+.review-con > ul > li {
     width: 16.6666%;
     height: 400px;
     float: left;
 }
-.subcontents5 .inner-subcontents5 .con2 span.arrow {
+.subcontents5 .con2 span.arrow {
     display: block;
     width: 50px;
     height: 50px;
     position: absolute;
     top: 35%;
 }
-.subcontents5 .inner-subcontents5 .con2 span.arrow:hover{
+span.arrow:hover{
     opacity: .5;
 }
-.subcontents5 .inner-subcontents5 .con2 span.arrow.arrowright {
+span.arrow.arrowright {
     right: 0px;
 }
 
 
 @media only screen and (min-width:768px) and (max-width:1023px)  {
-    
     
 	/*sub1*/
 	/*sub2.3.4*/
@@ -269,23 +268,23 @@
 	}
 
 	/*sub6*/
-	.subcontents5 .inner-subcontents5 .con2 .inner-con2 {
+	.subcontents5 .con2 .inner-con2 {
 		max-width: 700px;
 		height: 200px;
 	}
-	.subcontents5 .inner-subcontents5 .con2 .inner-con2 .review{
+    .review{
 		height: 200px;
 	}
-	.subcontents5 .inner-subcontents5 .con2 .inner-con2 .review .review-con > ul > li {
+	.review-con > ul > li {
 		height: 200px;
 	}
-	.subcontents5 .inner-subcontents5 .con2 span.arrow.arrowleft {
+	span.arrow.arrowleft {
 		left: 30px;
 	}
-	.subcontents5 .inner-subcontents5 .con2 span.arrow.arrowright {
+	span.arrow.arrowright {
 		right:30px;
 	}
-    .subcontents6 .inner-contents6 video{
+    video{
         max-width: 700px;
         height: auto;
         display: block;
@@ -296,7 +295,7 @@
 @media only screen and (max-width:767px) {
     
     /*sub1*/
-    .subcontents1 .inner-subcontents1 .con2{
+    .subcontents1 .con2{
         width: 95%;
         line-height: 20px;
     }
@@ -328,7 +327,7 @@
 		font-size: 15px;
 	}
     /*sub6*/
-	.subcontents5 .inner-subcontents5 .con2 .inner-con2 .review{
+	.review{
 		width: 100%;
 		height: 400px;
         left: 50%;
@@ -336,10 +335,10 @@
         top: 0;
 		position: absolute;  
 	}
-	.subcontents5 .inner-subcontents5 .con2 span.arrow {
+	span.arrow {
 		top: 28%;
 	}  
-    .subcontents6 .inner-contents6 video{
+    video{
         max-width: 400px;
         height: auto;
         display: block;

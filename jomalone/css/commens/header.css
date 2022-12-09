@@ -11,39 +11,39 @@
     background: #000;
 }
 /*span menu*/
-.header .inner-header .topmenu span.menu {
+.topmenu span.menu {
     display: none;
 }
-.header .inner-header .topmenu h1.logo {
+.topmenu h1.logo {
     width: 200px;
     height: 80px;
     margin: 0 auto;
 }
 /*middle*/
-.header .inner-header .middlemenu {
+.middlemenu {
     width: 100%;
     height: 16px;
 }
-.header .inner-header .middlemenu .middle-con::after {
+.middle-con::after {
     content: "";
     display: block;
     clear: both;
 }
-.header .inner-header .middlemenu .middle-con {
+.middle-con {
     width: 200px;
     float: right;
 }
-.header .inner-header .middlemenu .middle-con ul > li {
+.middle-con ul > li {
     width: 33.3333%;
     float: left;
     position: relative;/**/
 }
-.header .inner-header .middlemenu .middle-con ul > li > a img {
+.middle-con ul > li > a img {
     width: 16px;
     display: block;
     margin: 0 auto;
 }
-.header .inner-header .middlemenu .middle-con ul > li span.sub {
+.middle-con ul > li span.sub {
     color: #fff;
     width: 40px;
     text-align: center;
@@ -55,64 +55,64 @@
     margin-left:-20px;/**/
     top: 20px;/**/
 }
-.header .inner-header .middlemenu .middle-con ul > li > a img:hover {
+.middle-con ul > li > a img:hover {
     transition: all 0.5s;
     transform: translate(0px, -1px);
 }
 /*bottom*/
-.header .inner-header .bottommenu {
+.bottommenu {
     height: 50px;
     width: 100%;
 }
-.header .inner-header .bottommenu .gnb .gnb-center {
+.gnb-center {
     width: 800px;
     margin: 0 auto;
 }
-.header .inner-header .bottommenu .gnb .gnb-center::after {
+.gnb-center::after {
     content: "";
     display: block;
     clear: both;
 }
-.header .inner-header .bottommenu .gnb .gnb-center ul > li {
+.gnb-center ul > li {
     width: 16.6666%;
     line-height: 50px;
     float: left;
 }
-.header .inner-header .bottommenu .gnb .gnb-center ul > li > a {
+.gnb-center ul > li > a {
     font-size: 13px;
     color: #fff;
     display: block;
     text-align: center;
 }
-.header .inner-header .bottommenu .gnb .gnb-center ul > li:nth-child(1){
+.gnb-center ul > li:nth-child(1){
     text-decoration: underline;
 }
-.header .inner-header .bottommenu .gnb .gnb-center ul > li:nth-child(5){
+.gnb-center ul > li:nth-child(5){
     text-decoration: underline;
 }
-.header .inner-header .bottommenu .gnb .gnb-center ul > li > a:hover {
+.gnb-center ul > li > a:hover {
     transition: all 0.2s;
     transform: translate(0px, -1px);
 }
-.header .inner-header .bottommenu .gnb .gnb-left {
+.gnb-left {
     width: 100px;
     float: left;
     margin-top: -50px;
 }
-.header .inner-header .bottommenu .gnb .gnb-left ul > li {
+.gnb-left ul > li {
     width: 50%;
     float: left;
     text-align: center;
 }
-.header .inner-header .bottommenu .gnb .gnb-left ul > li > a {
+.gnb-left ul > li > a {
     font-size: 12px;
     color: #fff;
     line-height: 50px;
 }
-.header .inner-header .bottommenu .gnb .gnb-left ul > li > a{
+.gnb-left ul > li > a{
     text-decoration-line: underline;
 }
-.header .inner-header .bottommenu .gnb-left > ul > li:hover {
+.gnb-left > ul > li:hover {
     transition: all 0.2s;
     transform: translate(0px, -1px);
 }
@@ -127,12 +127,12 @@
     left: 0;
     z-index: 30;
 }
-.submenu .inner-submenu {
+.inner-submenu {
     max-width: 800px;
     height: auto;
     margin: 0 auto;
 }
-.submenu .inner-submenu .subgnb > ul > li {
+.subgnb > ul > li {
     width: 16.6666%;
     height: auto;
     float: left;
@@ -140,7 +140,7 @@
     line-height: 40px;
     font-size: 13px;
 }
-.submenu .inner-submenu .subgnb > ul > li>a:hover{
+.subgnb > ul > li>a:hover{
     font-weight: bold;
 }
 /*ad*/
@@ -164,37 +164,37 @@
 
 @media only screen and (min-width:768px) and (max-width:1023px) {
     /*middle*/
-    .header .inner-header .middlemenu .middle-con {
+    .middle-con {
         width: 130px;
     }
-    .header .inner-header .middlemenu .middle-con ul > li > a img {
+    .middle-con ul > li > a img {
         width: 15px;
     }
-    .header .inner-header .middlemenu .middle-con ul > li span.sub {
+    .middle-con ul > li span.sub {
         visibility: hidden;
         display: none;
     }
     /*bottom*/
-    .header .inner-header .bottommenu {
+    .bottommenu {
         height: 45px;
         width: 100%;
     }
-    .header .inner-header .bottommenu .gnb .gnb-center {
+    .gnb-center {
         width: 700px;
         margin: 0 auto;
     }
-    .header .inner-header .bottommenu .gnb .gnb-center ul > li {
+    .gnb-center ul > li {
         height: 40px;
         line-height: 40px;
     }
-    .header .inner-header .bottommenu .gnb .gnb-center ul > li > a {
+    .gnb-center ul > li > a {
         font-size: 12px;
     }
-    .header .inner-header .bottommenu .gnb .gnb-left {
+    .gnb-left {
         height: 30px;
         margin-top: -60px;
     }
-    .header .inner-header .bottommenu .gnb .gnb-left ul > li > a {
+    .gnb-left ul > li > a {
         font-size: 11px;
         line-height: 35px;
     }
@@ -202,49 +202,49 @@
     .submenu {
         top: 129.5px;
     }
-    .submenu .inner-submenu {
+    .inner-submenu {
         max-width: 700px;
     }
-    .submenu .inner-submenu .subgnb > ul > li > a {
+    .subgnb > ul > li > a {
         line-height: 35px;
         font-size: 11px;
     }
 }
 
 @media only screen and (max-width:767px) {
-    .header .inner-header .middlemenu {
+    .middlemenu {
         display: none;
     }
-    .header .inner-header .bottommenu {
+    .bottommenu {
         height: 0px;
     }
-    .header .inner-header .bottommenu .gnb .gnb-right {
+    .gnb-right {
         display: none ;
     }
     .submenu {
         display: none;
         visibility: hidden;
     }
-    .header .inner-header .topmenu {
+    .topmenu {
         height: 60px !important;
     }
-    .header .inner-header .topmenu h1.logo img {
+    .topmenu h1.logo img {
         width: 190px;
         height: 60px;
         margin: 0 auto;
     }
-    .header .inner-header .topmenu span.menu {
+    .topmenu span.menu {
         display: block;
         width: 40px;
         height: 50px;
         cursor: pointer;
         margin-top: -75px;
     }
-    .header .inner-header .topmenu span.menu img {
+    .topmenu span.menu img {
         display: block;
         width: 50px;
     }
-    .header .inner-header .bottommenu .gnb {
+    .gnb {
         position: fixed !important;
         width: 80%;
         height: 100%;
@@ -254,23 +254,23 @@
         position: absolute;
         left: -800px;
     }
-    .header .inner-header .bottommenu .gnb .gnb-center {
+    .gnb-center {
         position: fixed;
         width: 80%;
         z-index: 100;
         margin: 60px 0px;
     }
-    .header .inner-header .bottommenu .gnb .gnb-center ul > li {
+    .gnb-center ul > li {
         width: 100%;
         height: 60px;
     }
-    .header .inner-header .bottommenu .gnb .gnb-center ul > li>a{
+    .gnb-center ul > li>a{
         font-size: 18px;
     }
     .ad {
         display: none;
     }
-	.header .inner-header .bottommenu .gnb .gnb-left {
+	.gnb-left {
 		width: 80%;
 		height: auto;
 		float: none;
@@ -279,7 +279,7 @@
 		display: block;
 		z-index: 100;
 	}
-	.header .inner-header .bottommenu .gnb .gnb-left ul > li > a {
+	.gnb-left ul > li > a {
 		font-size: 18px;
 	}
 	.leftxmenu{
