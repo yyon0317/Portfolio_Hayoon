@@ -218,7 +218,7 @@
 	</div>
 
 	<script>
-		//login ok 클릭해서 -> userid: yhy8283@naver.com, userpw:dbsgkdbs77 하면 로그인 실행
+		//login ok 클릭해서 -> userid: yhy8283, userpw:dbsgkdbs77 하면 로그인 실행
 		//if(value.trim() !== "" || value.length != 6)문을 사용해서 로그인 확인
 		let loginform = document.getElementsByName('loginform')[0];
 		let loginok = document.querySelector('#loginok');
@@ -232,7 +232,7 @@
 				userid.focus();
 				return false;
 			}
-			if (userid.value.trim() !== "yhy8283@naver.com" || userid.value.length != 6) {
+			if (userid.value.trim() !== "yhy8283" || userid.value.length != 7) {
 				alert("아이디가 일치하지 않습니다... 다시 입력 해주세요");
 				userid.focus();
 				return false;
@@ -242,7 +242,7 @@
 				userpw.focus();
 				return false;
 			}
-			if (userpw.value.trim() !== "dbsgkdbs77" || userpw.value.length != 6) {
+			if (userpw.value.trim() !== "dbsgkdbs77" || userpw.value.length != 10) {
 				alert("비밀번호가 일치하지 않습니다.. 다시 입력 해주세요");
 				userpw.focus();
 				return false;

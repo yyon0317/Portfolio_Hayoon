@@ -1,8 +1,6 @@
 @charset "utf-8";
 @import "variables";
 
-
-
 /*header*/
 .wrap{
     width: 100%;
@@ -30,6 +28,7 @@ header{
     width: 100%;
     position: relative;
     display: none;
+    z-index: 10000;
     &::after{
         @include afterclear;
     }
@@ -59,12 +58,18 @@ header{
     margin-top: 75px;
     position: relative;
     left: 0;
-    top: 0;
+    top: 10px;
     z-index: 100;
     ul>li{
         margin: {
             right: 1px;
-            top: 25px;
+            top: 17px;
+        }
+        &:nth-child(1)::after{
+            content: "";
+            display: block;
+            border-bottom: 1px solid;
+            width: 24px;
         }
         :hover{
             opacity: 0.5;
@@ -370,11 +375,10 @@ footer{
     height: 600px;
     background-color: $color-bg;
     .flogo{
-        width: 100%;
+        width: 90%;
         height: 50px;
         margin: 0 auto;
         padding-top: 30px;
-        padding-left: 50px;
     }
     .in-footer{
         width: 90%;
@@ -439,7 +443,7 @@ footer{
 /*shoplink*/
 .shoplink{
     font-size: $font-sizem;
-    color: $color-title;
+    color: $color-point;
     display: block;
     width: 40%;
     margin-top:30px;
@@ -449,7 +453,7 @@ footer{
         display: block;
         width: 40%;
         height: 3px;
-        background: #8a8a8a;
+        background: $color-point;
         position: relative;
         left: 0;
         top: 35px;
@@ -662,7 +666,7 @@ section .title{
         float: left;
         position:inherit;
         ul{
-            width: 70%;
+            width: 67%;
             float: right;
             height: auto;
             li{
@@ -671,11 +675,11 @@ section .title{
             }
         }
     .hicon{
-        width: 10%;
+        width: 13%;
         margin-top: 10px;
         ul>li{
             float: left;
-            width: 25%;
+            width: 20%;
             margin: {
                 right: 0px;
             }
@@ -719,6 +723,7 @@ section .title{
     /*bgtext*/
     .bgtext{
         font-size: 100px;
+        top: 200px;
         &.on{
             left: 30px;
             top: 200px;
@@ -771,6 +776,15 @@ section .title{
                 }
                 .text{
                     @include p-font-text;
+                    p{
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                        font-weight: 500;
+                    }
+                    span{
+                        font-size: 18px;
+                        font-weight: 500;
+                    }
                 }
             }
         }   
@@ -837,7 +851,7 @@ section .title{
     footer{
         height: 400px;
         .flogo{
-            padding-left: 100px;
+            padding-left: 0px;
         }
         .in-footer{
             display: flex;

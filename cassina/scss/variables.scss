@@ -93,6 +93,20 @@ $transition-2s : all 2s;
 @mixin circleon{
     border: 40px solid $color-secondary;
 }
+@mixin logininput{
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    transition: 0.35s;
+    padding-left: 35px;
+}
+
+
 
 //반응형 화면 크기
 $mobile: 768px;

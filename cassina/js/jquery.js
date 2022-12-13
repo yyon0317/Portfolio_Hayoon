@@ -1,3 +1,5 @@
+/*scroll active*/
+//scroll/scrolltop()/offset()을 사용해서 스크롤 시 css.animation html.class'on'추가
 $(window).scroll(function () {
 	var win_top = $(window).scrollTop()
 	var win_h = $(window).height()
@@ -13,43 +15,35 @@ $(window).scroll(function () {
 $(document).ready(function () {
 
 	/*menu*/
+	//toggleClass()/fadeToggle 사용해서 menu버튼 동적효과 적용 
 	$('.navbtn').click(function () {
 		$('.gnb').fadeToggle(500)
 		$('.navbtn').toggleClass('open')
 	});
 
-
-
-	//배경이미지
+	//autogallery ->fade
+	//function()함수/if()조건문/setInterval()반복 실행으로 autogallery구현
+	//jQuery Effect Methods fadeIn()/siblings()/fadeOut()/addClass()/siblings()/removeClass()를 사용해서 클릭시 보이고 그외 숨기기
 	var galleryli = $('.gallery>ul>li');
-
-	//자동갤러리 ->fade
 	var idx = -1;
 	var itemsli = $('.items>ul>li')
 
 	function autogallery() {
-		if (idx >= galleryli.length - 1) idx = -1; //마지막 클릭후 손 아웃하면 3초 후에 1번으로 이거 안하면 6초루에 감
-
+		if (idx >= galleryli.length - 1) idx = -1; 
 		idx++;
 		//12340순서
-		console.log(idx);
 		galleryli.eq(idx).fadeIn().siblings().fadeOut();
 		itemsli.eq(idx).addClass('on').siblings().removeClass('on');
-
-		if (idx >= galleryli.length - 1) idx = -1; //처음으로 돌아가기
+		if (idx >= galleryli.length - 1) idx = -1; 
 	}
+	var setin = setInterval(autogallery, 3000); 
 
-	var setin = setInterval(autogallery, 3000); //시간이 흐른 다음에 실행
-
-	//items 관련
+	//items 
 	itemsli.on('click', itemslifunc);
-
 	function itemslifunc() {
 		var thisidx = $(this).index();
-
 		galleryli.eq(thisidx).fadeIn(400).siblings().fadeOut();
 		$(this).addClass('on').siblings().removeClass('on');
-
 		idx = thisidx;
 	}
 });
