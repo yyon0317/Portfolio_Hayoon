@@ -505,7 +505,7 @@ button{border: 0; background: none;}
 }
 .in-contents4{
 	width: 95%;
-	height: 500px;
+	height: auto;
 	margin: 0 auto;
 }
 .in-contents4 >.title{
@@ -716,7 +716,7 @@ button{border: 0; background: none;}
 /*contents4*/
 .in-contents4{
 	width: 95%;
-	height: 600px;
+	height: auto;
 	margin: 0 auto;
 }
 .career:nth-child(1){
@@ -833,7 +833,7 @@ button{border: 0; background: none;}
 }
 /*contents4*/
 .in-contents4{
-	height: 700px;
+	height: auto;
 }
 .career:nth-child(1){
 	margin-left: 30px;
