@@ -1,3 +1,7 @@
+$(document).on('click', 'a[href="#"]', function(e) {
+    e.preventDefault();
+});
+
 $(document).ready(function() {
     intro();
     mainVisual();
@@ -6,6 +10,7 @@ $(document).ready(function() {
     logoRoll();
 });
 /*intro*/
+//인트로 시 배경 animte()효과 사용
 function intro() {
     setTimeout(function() {
         $('body.main').removeClass('over');
@@ -16,6 +21,8 @@ function intro() {
     }, 2000);
 }
 /*mainVisual*/
+//video pause().play() 버튼 설정
+//quick-menu 버튼 클릭시 css('opacity').delay(i * 150) 나타나기
 function mainVisual() {
     $('#visual div.video-box a').on('click', function() {
         var videoAuto = $('video').get(0);
@@ -45,6 +52,7 @@ function mainVisual() {
       
 }
 /*notice*/
+//parent().next().css() 사용해서 탭 기능 버튼 구현
 function notice() {
     var set = $('#notice dl dt.on').next().css({'display': 'block'});
     
@@ -59,6 +67,7 @@ function notice() {
     });
 }
 /*banner*/
+//jquary 사용해서 slider구현
 function banner() {
     var offsetLeft = 0;
     var boxWidth = $('#banner div.banner-slider div.box').outerWidth(true);
@@ -124,6 +133,7 @@ function banner() {
     }    
 }
 /*logoroll*/
+//jquary 사용해서 slider구현
 function logoRoll() {
     var offsetLeft = 0;
     var boxWidth = $('#logo-roll div.banner-slide div.box').innerWidth();

@@ -1,12 +1,9 @@
-$(document).on('click', 'a[href="#"]', function(e) {
-    e.preventDefault();
-});
-
 $(document).ready(function() {
     GNB();
     goTop();
 });
-
+/*lang-list*/
+//jQuery click() mouseenter() focusin() Method를 사용해서 jQuery Effects로 gnb버튼 동작구현(pc/moblie)
 function GNB() {
     $('#gnb li.depth1 > a').on('mouseenter focusin', function() {
         //if ($('#gnb-btn').hasClass('active') === true) return false;
@@ -59,7 +56,8 @@ function GNB() {
         $(this).find('> a').removeClass('on');
     });
 }
-
+/*go top*/
+//jQuery click() Method를 사용해서 animate.scrollTop 상단으로 이동
 function goTop() {
     $('.go-top').on('click', function(e) {
         e.preventDefault();
