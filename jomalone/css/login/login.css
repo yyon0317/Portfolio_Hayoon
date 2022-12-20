@@ -1,117 +1,30 @@
-@charset "utf-8";
-/*submit*/
+@charset "utf-8";/*submit*/
 
-.submenu {
-    top: 145px !important;
-}
-.footer {
-    background: #000 !important;
-}
-.contents {
-    width: 100%;
-    height: 900px;
-    background: url(../../img/login/loginbg.jpg) no-repeat 50%;
-    background-size: cover;
-    background-attachment: fixed;
-}
+.submenu { top: 145px !important; } 
+.footer { background: #000 !important; } 
+.contents { width: 100%; height: 900px; background: url(../../img/login/loginbg.jpg) no-repeat 50%; background-size: cover; background-attachment: fixed; } 
 
 /*contents 시작*/
-.inner-con {
-    width: 100%;
-    height: auto;
-    padding-top: 150px;
-    margin-bottom: 150px;
-}
-.login {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    box-sizing: border-box;
-    margin: 0px auto;
-    padding: 50px 30px;
-    box-shadow: 1px 1px 10px #fff5;
-    background: #fff;
-}
-.login-title {
-    width: 100%;
-    height: auto;
-    padding: 20px 0;
-}
-.maintitle {
-    text-align: center;
-}
-.subtitle {
-    text-align: center;
-    font-size: 13px;
-    line-height: 50px;
-}
-.login-form {
-    width: 100%;
-    height: auto;
-}
-.login-form ul > li {
-    padding: 12px 40px;
-}
-.login-form ul > li input {
-    width: 100%;
-    height: 40px;
-    display: block;
-    text-indent: 10px;
-    border: 1px solid #eee;
-    background: #eeed;
-    outline: none;
-}
-input:focus{
-    background: #fff;
-    border: 1px solid #eeed;
-}
-input[type=submit] {
-    background: #f0efe4;
-    color: #fff;
-    cursor: pointer;
-}
-input[type=submit]:hover {
-    color: #000;
-}
-.sub-login{
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    font-size: 10px;
-    text-align: center;
-}
-.login-form .sub-login>ul>li{
-    width: 33.3333%;
-    float: left;
-    box-sizing: border-box;
-    padding: 0;
-    border-left: 1px solid;
-}
-.login-form .sub-login>ul .if{
-    border-left: 0px solid;
-}
 
-@media only screen and (min-width:768px) and (max-width:1023px)  {
-	.inner-con{
-		width: 100%;
-		max-width: 70%;
-		margin: 0 auto;
-		height: auto;
-		padding-top: 150px;
-		margin-bottom: 150px;
-	}
-	}
+.inner-con { width: 100%; height: auto; padding-top: 150px; margin-bottom: 150px; } 
+.login { width: 100%; max-width: 600px; height: auto; box-sizing: border-box; margin: 0px auto; padding: 50px 30px; box-shadow: 1px 1px 10px #fff5; background: #fff; } 
+.login-title { width: 100%; height: auto; padding: 20px 0; } 
+.maintitle { text-align: center; } 
+.subtitle { text-align: center; font-size: 13px; line-height: 50px; } 
+.login-form { width: 100%; height: auto; } 
+.login-form ul > li { padding: 12px 40px; } 
+.login-form ul > li input { width: 100%; height: 40px; display: block; text-indent: 10px; border: 1px solid #eee; background: #eeed; outline: none; } 
+input:focus { background: #fff; border: 1px solid #eeed; } 
+input[type=submit] { background: #f0efe4; color: #fff; cursor: pointer; } 
+input[type=submit]:hover { color: #000; } 
+.sub-login { width: 100%; max-width: 400px; margin: 0 auto; font-size: 10px; text-align: center; } 
+.login-form .sub-login>ul>li { width: 33.3333%; float: left; box-sizing: border-box; padding: 0; border-left: 1px solid; } 
+.login-form .sub-login>ul .if { border-left: 0px solid; } 
+
+@media only screen and (min-width:768px) and (max-width:1023px) {
+.inner-con {width: 100%;max-width: 70%;margin: 0 auto;height: auto;padding-top: 150px;margin-bottom: 150px; } 
+}
 @media only screen and (max-width:767px) {
-	.inner-con{
-		width: 100%;
-		max-width: 90%;
-		margin: 0 auto;
-		height: auto;
-		padding-top: 150px;
-		margin-bottom: 150px;
-	}
-    .login-form ul > li {
-    box-sizing: border-box;
-    padding: 12px 10px;
-}   
+.inner-con {width: 100%;max-width: 90%;margin: 0 auto;height: auto;padding-top: 150px;margin-bottom: 150px; } 
+.login-form ul > li { box-sizing: border-box; padding: 12px 10px; } 
 }

@@ -121,4 +121,10 @@ jQuery(document).ready(function () {
 	}, function () {
 		$(".swiper-slide >.con1>img").attr('src', "img/con1.png");
 	});
+
+	$(".swiper-slide >.con5>img").hover(function () {
+		$(".swiper-slide >.con5>img").attr('src', "img/con5-5.png");
+	}, function () {
+		$(".swiper-slide >.con5>img").attr('src', "img/con5.png");
+	});
 })

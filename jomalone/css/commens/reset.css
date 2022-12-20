@@ -1,30 +1,11 @@
-@charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?&family=Roboto:wght@300;400;500&display=swap');
+@charset "utf-8";@import url('https://fonts.googleapis.com/css2?&family=Roboto:wght@300; 400; 500&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-}
-html,body{
-    width: 100%;
-    height: 100%;  
-    font-family: 'Roboto','Nanum Gothic', sans-serif;
-    font-weight:lighter;
-    
-}
-ol,ul,li{
-    list-style: none;
-}
-a{
-    text-decoration: none;
-    color: #000;
-}
-img{
-   border: 0; 
-}
-header,section,nav,aside,article,main{
-    display: block;
-}
+* { margin: 0; padding: 0; } 
+html,body { width: 100%; height: 100%; font-family: 'Roboto','Nanum Gothic', sans-serif; font-weight:lighter; }
+ol,ul,li { list-style: none; } 
+a { text-decoration: none; color: #000; } 
+img { border: 0; } 
+header,section,nav,aside,article,main { display: block; } 
 
 
 
