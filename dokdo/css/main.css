@@ -1,8 +1,8 @@
 @charset "utf-8";/* Intro */
 #intro { position: absolute; top: 0; right: 0; width: 100%; height: 100vh; background: #fff; z-index: 10000; } 
 #intro.off { display: none; } 
-#intro span.intro-bg { position: absolute; top: 0; right: 0; width: 100%; height: 100%; animation: intro-size 1s 1.1s 1 normal forwards; } 
-#intro span.intro-bg::before { position: absolute; top: 0; left: 0; height: 100%; animation: intro-bg 1s 1 normal forwards; background: #41478f; background-image: linear-gradient(-40deg, #41478f 35%, #c1445a); content: ''; } 
+#intro span.intro-bg { position: absolute; top: 0; right: 0; width: 100%; height: 100%; animation: intro-size 1s 1.1s normal forwards; } 
+#intro span.intro-bg::before { position: absolute; top: 0; left: 0; height: 100%; animation: intro-bg 1s normal forwards; background: #41478f; background-image: linear-gradient(-40deg, #41478f 35%, #c1445a); content: ''; } 
 
 /* Main Visual */
 #visual { position: relative; width: calc(100% - 70px); height: 100vh; margin-left: 70px; overflow: hidden; box-sizing: border-box; } 
@@ -87,8 +87,8 @@ div.title-box a.more-btn span { position: absolute; top: 50%; left: 0; width: 10
 #notice dl dt > a { display: block; padding-left: 15px; } 
 #notice dl dd { display: none; padding: 70px 10px 70px 40px; background: #f9fafa; font-size: 0; } 
 #notice dl dd > a { display: inline-block; /*position: relative; */ width: 33.3333%; height: 230px; padding-left: 40px; box-sizing: border-box; vertical-align: top; font-size: 1.5rem; } 
-#notice dl dd > a strong.title span { display: block; height: 4.5em; font-size: 1.8rem; font-weight: 600; line-height: 1.5em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; } 
-#notice dl dd > a p.text { height: 5.1em; line-height: 1.7em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; color: #666; } 
+#notice dl dd > a strong.title span { display: block; height: 4.5em; font-size: 1.8rem; font-weight: 600; line-height: 1.5em; overflow: hidden; text-overflow: ellipsis; } 
+#notice dl dd > a p.text { height: 5.1em; line-height: 1.7em; overflow: hidden; text-overflow: ellipsis; color: #666; } 
 #notice dl dd > a span.date { position: absolute; bottom: 70px; color: #9a9a9a; } 
 
 #group01 { background: linear-gradient(to right, #fff 30%, #f6f1f2 100%); } 
@@ -185,7 +185,7 @@ div.title-box a.more-btn span { position: absolute; top: 50%; left: 0; width: 10
  div.title-box { left: 15px; } 
  }
 @media (max-width: 1360px){
- #visual { position: relative; height: calc(100vh - 100px); min-height: 812px; } 
+ #visual { position: relative; height: calc(100vh - 100px); min-height: 812px;} 
  #visual div.video-box { top: 0; height: calc(100% - 100px); } 
  #visual div.quick-menu.on { width: 85%; } 
  #visual div.quick-menu > a { transform: translate(0, -100%); } 

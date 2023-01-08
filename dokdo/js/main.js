@@ -10,7 +10,7 @@ $(document).ready(function() {
     logoRoll();
 });
 /*intro*/
-//인트로 시 배경 animte()효과 사용
+//인트로 후 css효과 설정
 function intro() {
     setTimeout(function() {
         $('body.main').removeClass('over');
@@ -45,9 +45,6 @@ function mainVisual() {
                 $(this).delay(i * 150).animate({'opacity': 1});
             });
         } 
-    });
-    $('#visual div.quick-menu > a').on('mouseenter mouseleave', function() {
-        $(this).toggleClass('active');
     });
       
 }

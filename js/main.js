@@ -24,7 +24,6 @@ jQuery(document).ready(function () {
 
 	
 	//menu 
-	
 	document.querySelector('.book1').addEventListener('click',function(){
 		document.querySelector('.inslide').classList.toggle('on');
 	});

@@ -212,7 +212,7 @@ $('#click').click(function(){
     /*timer*/
 
     $('.login_tab li:nth-child(2)').click(function(){
-        var time = 180;
+    var time = 180;
     var min = "";
     var sec = "";
 

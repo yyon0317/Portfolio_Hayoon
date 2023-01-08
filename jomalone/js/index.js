@@ -215,7 +215,7 @@ $(document).ready(function () {
 	function autogallery() {
 		idx++;
 		galleryli.eq(idx).fadeIn().siblings().fadeOut();
-		if (idx >= galleryli.length - 1) idx = -1;
+		if (idx >= galleryli.length - 1) idx = -1; 
 		itemsli.eq(idx).addClass('on').siblings().removeClass('on');
 	}
 	var setin = setInterval(autogallery, 3000);

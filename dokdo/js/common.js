@@ -28,13 +28,10 @@ function GNB() {
         $('body').toggleClass('over');
         
         $(this).toggleClass('active');
-        $('#header h1.logo a').toggleClass('white');
         
         $('#gnb-wrap').toggleClass('on');
         $('#top-util').toggleClass('on');
         
-        $('#gnb li.depth2 > a').removeClass('open');
-        $('#gnb li.depth2 > ul').slideUp();
         $('#gnb li.depth2 > a').on('click', function() { 
             $(this).toggleClass('open');
             $(this).next().slideToggle();

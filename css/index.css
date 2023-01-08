@@ -301,7 +301,7 @@ button{border: 0; background: none;}
 	border-style: solid;
 	position: relative;
 	top: 80%;
-	border-color: #EA543C transparent transparent transparent;
+	border-color: #EA543C transparent transparent ;
 }
 .ability >.con2 > ul >li >.text_1{
 	margin-top: 20px;
